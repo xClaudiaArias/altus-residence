@@ -26,7 +26,7 @@ export default function Navbar () {
             component="div"
             sx={{ flexGrow: 1, fontWeight: "bold" }}
             >
-                <Link href="/" style={{ textDecoration: "none", color: "white", letterSpacing: 2 }}>
+                <Link href="/" style={{ color: isAcerca ? '#000' : '#fff', textDecoration: "none", letterSpacing: 2 }}>
                     ALTUS
                 </Link>
             </Typography>
