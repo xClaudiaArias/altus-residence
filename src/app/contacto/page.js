@@ -6,49 +6,119 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Contacto() {
     return (
-        <Box>
-            <Box>
-                <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center', mt: 10 }}>
-                    Contáctanos
-                </Typography>   
-                <Typography>
-                    Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros.
-                </Typography>
-                <Typography>
-                    <p>Teléfono: +1 (809) 555-1234</p>
-                    <br></br>
-                    <p>Email: -------- </p>
-                </Typography>
-            </Box>
+        <Box
+            sx={{
+                width: '100%',
+                height: '100vh',
+                backgroundImage: 'url(/assets/exteriores/ext02.png)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center', 
+                alignItems: 'center',
+                backgroundColor: '#f0f0f0',
+                backgroundSize: '100% 100%',
+                backgroundPosition: 'center',
+                padding: 0,
+                margin: 0,
+            }}
+        >
 
-            <Box>
-                <TextField id="outlined-basic" label="Nombre" variant="outlined" />
-                <br></br>
-                <TextField id="outlined-basic" label="Email" variant="outlined" />
-                <br></br>
-                <TextField id="outlined-basic" label="Mensaje" variant="outlined" multiline rows={4} />
-                <br></br>
+            <Box sx={{ padding: 4, backgroundColor: 'white',  width: '40%', height: '400px' }}>
+                {/* <Box>
+                    <Typography variant="h1" sx={{fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mb: 2 }}>
+                        Contáctanos
+                    </Typography>   
+                    <Typography>
+                        Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros.
+                    </Typography>
+                    <Typography>
+                        Teléfono: +1 (809) 555-1234
+                        <br></br>
+                        Email: -------- 
+                    </Typography>
+                </Box> */}
+
                 <Box>
-                    <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-                        <SendIcon/>  Enviar
-                    </Button>
-                    <List>
-                        <ListItem>
-                            <Link href="https://www.instagram.com/altusdr/" target="_blank" rel="noopener noreferrer">
-                                <Typography variant="body1" sx={{ mt: 2 }}>
-                                    <InstagramIcon></InstagramIcon>
-                                </Typography>
-                            </Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link href="https://www.facebook.com/altusdr/" target="_blank" rel="noopener noreferrer">
-                                <Typography variant="body1" sx={{ mt: 2 }}>
-                                    <FacebookIcon />
-                                </Typography>
-                            </Link>
-                        </ListItem>
-                    </List>
+                    <Typography variant="h1" sx={{fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mb: 2 }}>
+                        Contáctanos
+                    </Typography>  
+                    <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mb: 1 }}>
+                        <Typography sx={{textTransform: 'uppercase', fontSize: '14px',  width: '80px', fontWeight: 300}}>Nombre</Typography>
+                        <TextField
+                            id="outlined-basic"
+                            variant="outlined"
+                            sx={{
+                                flex: 2,
+                                '& .MuiInputBase-root': {
+                                height: '32px',
+                                fontSize: '14px',
+                                },
+                                '& input': {
+                                padding: '8px',
+                                }
+                            }}
+                        />
+                    </Box>
+                    <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mb: 1 }}>
+                        <Typography sx={{textTransform: 'uppercase', fontSize: '14px', fontWeight: 300, width: '80px'}}>Email</Typography>
+                        <TextField
+                            id="outlined-basic"
+                            variant="outlined"
+                            sx={{
+                                flex: 2,
+                                '& .MuiInputBase-root': {
+                                height: '32px',
+                                fontSize: '14px',
+                                },
+                                '& input': {
+                                padding: '8px',
+                                }
+                            }}
+                        />
+                    </Box>
+
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 2 }}>
+                        <Typography sx={{textTransform: 'uppercase', fontSize: '14px', fontWeight: 300, width: '100px'}}>Mensaje</Typography>
+                        <TextField
+                            multiline
+                            rows={6}
+                            variant="outlined"
+                            fullWidth
+                            sx={{
+                                '& .MuiInputBase-root': {
+                                fontSize: '14px',
+                                padding: 0,
+                                },
+                                '& textarea': {
+                                padding: '8px',
+                                }
+                            }}
+                            />
+
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <Button variant="contained" sx={{backgroundColor: 'black', color: 'white', textTransform: 'uppercase', fontSize: '14px', fontWeight: 300,  '&:hover': { backgroundColor: '#333' } }}>
+                            <SendIcon/>  Enviar
+                        </Button>
+                        <List sx={{ display: 'flex', alignItems: 'center' }}>
+                            <ListItem>
+                                <Link href="https://www.instagram.com/altusdr/" target="_blank" rel="noopener noreferrer">
+                                    <Typography variant="body1" sx={{color: 'black' }}>
+                                        <InstagramIcon></InstagramIcon>
+                                    </Typography>
+                                </Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://www.facebook.com/altusdr/" target="_blank" rel="noopener noreferrer">
+                                    <Typography variant="body1" sx={{color: 'black' }}>
+                                        <FacebookIcon />
+                                    </Typography>
+                                </Link>
+                            </ListItem>
+                        </List>
+                    </Box>
                 </Box>
+
             </Box>
         </Box>
     );
