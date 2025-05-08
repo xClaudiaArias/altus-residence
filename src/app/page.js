@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box';
+import { Box, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
@@ -26,21 +26,35 @@ export default function Inicio() {
           textAlign: 'center',
           padding: 0,
           margin: 0,
-          px: 4
+          px: 4,
+          position: 'relative',
         }}>
 
+
           <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            gap: 2,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'none',
+            position: 'absolute',
+            top: 100, 
+            left: 0,
+            pr: 4,
+          }}>
+
+          <Divider
             sx={{
-              width: '60px',
-              height: '.5px',
               backgroundColor: '#fff',
-              mt: 80,
-              px: 4
+              height: '1px',
+              width: '60px',
+              mt: 40
             }}
-          >
-
-          </Box>
-
+          />
           <Typography sx={{
             fontSize: '1em',
             fontFamily: 'Inter, san-serif', 
@@ -62,7 +76,8 @@ export default function Inicio() {
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            // alignItems: 'center',
+            gap: 5,
           }}
         >
           <Box
@@ -70,9 +85,13 @@ export default function Inicio() {
             src="/assets/logos/altus-logo.png"
             alt="Logo"
             sx={{
-              width: '150px',
-              // height: '150px'
+              width: '200px',
+              height: '100px',
               mixBlendMode: 'exclusion',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              // border: '1px solid red',
+              mt: 2,
             }}
           />
           <Box
@@ -81,11 +100,17 @@ export default function Inicio() {
             alt="Logo"
             sx={{
               width: '150px',
-              // height: '150px'
+              height: '100px',
               mixBlendMode: 'exclusion',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              // border: '1px solid yellow',
             }}
           />
         </Box>
+          </Box>
+
+          
 
       </Box>
 
