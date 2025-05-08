@@ -71,41 +71,48 @@ export default function Galeria() {
             height: 220,
             overflowY: 'auto',
             scrollBehavior: 'smooth',
-            width: '300px',
+            width: '300px'
             }}
         >
             <List sx={{ padding: 0 }}>
             {links.map(({ label, href }) => (
                 <ListItem key={label} disablePadding>
-                    <Link
-                        href={href}
-                        passHref
-                        style={{ textDecoration: 'none', color: 'white', width: '300px'}}
-                    >
-                        
-                        <ListItemText
-                        primary={
-                        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 1, textTransform: 'uppercase', fontWeight: 100, fontSize: '13px' }}>
-                            <ArrowForwardIcon fontSize="small" />
-                            {label}
-                        </Box>
-                        }
+                    <Link href={href} passHref style={{ textDecoration: 'none' }}>
+                        <Box
                         sx={{
+                            width: '300px',
+                            color: 'white',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'flex-end',
+                            gap: 1,
                             cursor: 'pointer',
+                            textAlign: 'right',
+                            py: 1,
                             borderBottom: '1px solid white',
-                            pb: 2,
-                        '&:hover': {
+                            transition: 'all 0.3s ease',
+                            '&:hover .arrow': {
+                            transform: 'translateX(4px)',
+                            },
+                            '&:hover': {
                             textDecoration: 'underline',
                             },
-                            textAlign: 'right',
-                            fontSize: '1.2rem',
-                            fontWeight: 'bold',
-                            py: 1,
                         }}
-
-                        />
+                        >
+                        <ArrowForwardIcon className="arrow" fontSize="small" sx={{ transition: 'transform 0.3s ease' }} />
+                        <Typography
+                            sx={{
+                            fontWeight: 100,
+                            fontSize: '13px',
+                            textTransform: 'uppercase',
+                            }}
+                        >
+                            {label}
+                        </Typography>
+                        </Box>
                     </Link>
-                </ListItem>
+                    </ListItem>
+
             ))}
         </List>
     </Box>
