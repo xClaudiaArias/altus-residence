@@ -1,12 +1,16 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Box, Typography, List, ListItem, ListItemText, Divider, IconButton } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Link from 'next/link';
 import EastIcon from '@mui/icons-material/East';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { red } from '@mui/material/colors';
+
 
 export default function Galeria() {
+
     const links = [
         { label: 'Apartamentos', href: '/galeria/apartamentos' },
         { label: 'Areas-comunes', href: '/galeria/areas-comunes' },
@@ -23,11 +27,21 @@ export default function Galeria() {
     ];
 
     const listRef = useRef(null);
+    const [showScrollTop, setShowScrollTop] = useState(false);
 
     const handleScroll = () => {
         if (listRef.current) {
-        listRef.current.scrollBy({ top: 60, behavior: 'smooth' }); // scroll down by ~1 item height
+            const scrollTop = listRef.current.scrollTop;
+            setShowScrollTop(scrollTop > 20); // set by pixels of scrolls
         }
+    };
+    
+    const scrollDown = () => {
+        listRef.current?.scrollBy({ top: 60, behavior: 'smooth' });
+    };
+    
+    const scrollUp = () => {
+        listRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -48,32 +62,67 @@ export default function Galeria() {
             pt: 20
         }}
         >
-        <Typography
-            variant='h1'
+        <Box
             sx={{
-            fontWeight: 400,
-            mb: 2,
-            textAlign: 'right',
-            color: 'white',
-            fontSize: '1rem',
-            textTransform: 'uppercase',
+                position: 'relative'
             }}
         >
-            Menu de Galeria
-        </Typography>
+            <Typography
+                variant='h1'
+                sx={{
+                fontWeight: 400,
+                mb: 2,
+                textAlign: 'right',
+                color: 'white',
+                fontSize: '1rem',
+                textTransform: 'uppercase',
+                }}
+            >
+                Menu de Galeria
+            </Typography>
 
-        <Divider sx={{ backgroundColor: '#fff', height: '1px', width: '300px', mb: 2 }} />
+            <Divider sx={{ backgroundColor: '#fff', height: '1px', width: '300px', mb: 2 }} />
 
+        <Box
+            sx={{
+                position: 'relative',
+                height: '24px',
+                display: 'flex',
+                alignItems: 'center'
+            }}>
+            {showScrollTop && (
+                    <IconButton
+                        onClick={scrollUp}
+                        sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        right: 0,
+                        color: 'white',
+                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        '&:hover': {
+                            backgroundColor: 'rgba(0,0,0,0.6)',
+                        },
+                        }}
+                    >
+                        <ArrowUpwardIcon />
+                    </IconButton>
+                    
+            )}
+        </Box>
+                
         {/* Scrollable List Container */}
         <Box
             ref={listRef}
+            onScroll={handleScroll}
             sx={{
             height: 220,
             overflowY: 'auto',
             scrollBehavior: 'smooth',
-            width: '300px'
+            width: '300px',
+            position: 'relative',
             }}
         >
+
             <List sx={{ padding: 0 }}>
             {links.map(({ label, href }) => (
                 <ListItem key={label} disablePadding>
@@ -113,14 +162,25 @@ export default function Galeria() {
                     </Link>
                     </ListItem>
 
+                    
+
             ))}
         </List>
-    </Box>
-
-        {/* Scroll Button */}
-        <IconButton onClick={handleScroll} sx={{ color: 'white', mt: 1 }}>
-            <ArrowDownwardIcon />
-        </IconButton>
         </Box>
+                {/* Scroll Button */}
+                <IconButton onClick={scrollDown} 
+                    sx={{
+                        fontSize: 'small',
+                        color: 'white', 
+                        mt: 2,
+                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        '&:hover': {
+                            backgroundColor: 'rgba(0,0,0,0.6)',
+                        },
+                    }}>
+                    <ArrowDownwardIcon />
+                </IconButton>
+        </Box>
+    </Box>
     );
 }
