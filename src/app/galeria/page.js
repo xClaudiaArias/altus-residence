@@ -7,28 +7,19 @@ import EastIcon from '@mui/icons-material/East';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { red } from '@mui/material/colors';
+import Collapse from '@mui/material/Collapse';
+
 
 
 export default function Galeria() {
     // tracking which menu items is beiing hovered 
     const [hoveredItem, setHoveredItem] = useState(null);
+    const [hoveredParent, setHoveredParent] = useState(null);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
 
 
     const links = [
-        { 
-            label: 'Apartamentos', 
-            href: '/galeria/apartamentos',
-            image: '/assets/images/apts-hero.png',
-            title: 'Apartamentos',
-            description: 'Unidades residenciales optimizadas en distribución y aprovechamiento del espacio.'
-        },
-        { 
-            label: 'Areas comunes', 
-            href: '/galeria/areas-comunes',
-            image: '/assets/images/areas-hero.png',
-            title: 'Area Comunes',
-            description: 'Áreas comunes diseñadas con enfoque funcional, ergonómico y estético.'
-        },
         { 
             label: 'Elevaciones', 
             href: '/galeria/elevaciones',
@@ -42,6 +33,29 @@ export default function Galeria() {
             image: '/assets/images/ext02.png',
             title: 'Exteriores',
             description: 'Vistas exteriores que integran diseño urbano con elementos naturales.'
+        },
+        { 
+            label: 'Interiores', 
+            href: '/galeria/Interiores',
+            image: '/assets/images/B04.png',
+            title: 'Interiores',
+            description: 'Unidades residenciales optimizadas en distribución y aprovechamiento del espacio.',
+            children: [
+                {
+                    label: 'Apartamentos',
+                    href: '/galeria/apartamentos',
+                    image: '/assets/images/apts-hero.png',
+                    title: 'Apartamentos',
+                    description: 'Departamentos modernos, funcionales y llenos de luz natural.'
+                },
+                {
+                    label: 'Áreas Comunes',
+                    href: '/galeria/areas-comunes',
+                    image: '/assets/images/areas-hero.png',
+                    title: 'Áreas Comunes',
+                    description: 'Ambientes interiores que combinan confort y diseño.'
+                }
+            ]
         },
         { 
             label: 'Plan Arquitectónico', 
@@ -204,59 +218,170 @@ export default function Galeria() {
             }}
         >
 
-            <List sx={{ padding: 0 }}>
-            {links.map((item) => (
-                <ListItem 
-                    key={item.label} 
-                    disablePadding
-                    onMouseEnter={() => setHoveredItem(item)}
-                    onMouseLeave={() => setHoveredItem(null)}
+        <List sx={{ padding: 0 }}>
+        {links.map((item) => {
+            const isInteriores = item.label === 'Interiores';
+            const isOpen = hoveredParent === item.label;
+
+            return (
+            <React.Fragment key={item.label}>
+                <ListItem
+                disablePadding
+                onMouseEnter={() => setHoveredItem(item)}
+                onMouseLeave={() => setHoveredItem(null)}
                 >
-                    <Link href={item.href} passHref style={{ textDecoration: 'none' }}>
-                        <Box
+                {isInteriores ? (
+                    <Box
+                    onClick={() => setDropdownOpen((prev) => !prev)}
+                    sx={{
+                        width: '300px',
+                        color: 'white',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'flex-end',
+                        gap: 1,
+                        cursor: 'pointer',
+                        textAlign: 'right',
+                        py: 1,
+                        borderBottom: '1px solid white',
+                        transition: 'all 0.3s ease',
+                        '&:hover .arrow': {
+                        transform: 'translateX(4px)',
+                        },
+                        '&:hover': {
+                        textDecoration: 'underline',
+                        },
+                    }}
+                    >
+                    {dropdownOpen ? (
+                        <ArrowDownwardIcon
+                        className="arrow"
+                        fontSize="13px"
+                        sx={{ transition: 'transform 0.3s ease' }}
+                        />
+                    ) : (
+                        <ArrowForwardIcon
+                        className="arrow"
+                        fontSize="13px"
+                        sx={{ transition: 'transform 0.3s ease' }}
+                        />
+                    )}
+                    <Typography
                         sx={{
+                        fontWeight: 100,
+                        fontSize: '13px',
+                        textTransform: 'uppercase',
+                        }}
+                    >
+                        {item.label}
+                    </Typography>
+                    </Box>
+                ) : (
+                    <Link href={item.href} passHref style={{ textDecoration: 'none' }}>
+                    <Box
+                        sx={{
+                        width: '300px',
+                        color: 'white',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'flex-end',
+                        gap: 1,
+                        cursor: 'pointer',
+                        textAlign: 'right',
+                        py: 1,
+                        borderBottom: '1px solid white',
+                        transition: 'all 0.3s ease',
+                        '&:hover .arrow': {
+                            transform: 'translateX(4px)',
+                        },
+                        '&:hover': {
+                            textDecoration: 'underline',
+                        },
+                        }}
+                    >
+                        <ArrowForwardIcon
+                        className="arrow"
+                        fontSize="13px"
+                        sx={{ transition: 'transform 0.3s ease' }}
+                        />
+                        <Typography
+                        sx={{
+                            fontWeight: 100,
+                            fontSize: '13px',
+                            textTransform: 'uppercase',
+                        }}
+                        >
+                        {item.label}
+                        </Typography>
+                    </Box>
+                    </Link>
+                )}
+                </ListItem>
+
+                {/* Dropdown for Interiores */}
+                {item.label === 'Interiores' && (
+                <Collapse in={dropdownOpen} timeout="auto" unmountOnExit>
+                    {item.children.map((child) => (
+                    <ListItem
+                        key={child.label}
+                        disablePadding
+                        onMouseEnter={() => setHoveredItem(child)}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <Link href={child.href} passHref style={{ textDecoration: 'none' }}>
+                        <Box
+                            sx={{
                             width: '300px',
                             color: 'white',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'flex-end',
                             gap: 1,
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                            // border: '1px, solid red',
                             cursor: 'pointer',
                             textAlign: 'right',
+                            fontSize: '13px',
                             py: 1,
                             borderBottom: '1px solid white',
+                            pl: 2,
                             transition: 'all 0.3s ease',
                             '&:hover .arrow': {
-                            transform: 'translateX(4px)',
+                                transform: 'translateX(4px)',
                             },
                             '&:hover': {
-                            textDecoration: 'underline',
+                                textDecoration: 'underline',
                             },
-                        }}
-                        >
-                        <ArrowForwardIcon className="arrow" fontSize="small" sx={{ transition: 'transform 0.3s ease' }} />
-                        <Typography
-                            sx={{
-                            fontWeight: 100,
-                            fontSize: '13px',
-                            textTransform: 'uppercase',
                             }}
                         >
-                            {item.label}
-                        </Typography>
+                            <ArrowForwardIcon className="arrow" fontSize="13px" sx={{ transition: 'transform 0.3s ease' }} />
+                            <Typography
+                            sx={{
+                                fontWeight: 100,
+                                fontSize: '11px',
+                                textTransform: 'uppercase',
+                            }}
+                            >
+                            {child.label}
+                            </Typography>
                         </Box>
-                    </Link>
+                        </Link>
                     </ListItem>
-
-                    
-
-            ))}
+                    ))}
+                </Collapse>
+                )}
+            </React.Fragment>
+            );
+        })}
         </List>
+
+
+
         </Box>
                 {/* Scroll Button */}
                 <IconButton onClick={scrollDown} 
                     sx={{
-                        fontSize: 'small',
+                        fontSize: '13px',
                         color: 'white', 
                         mt: 2,
                         backgroundColor: 'rgba(0,0,0,0.4)',
