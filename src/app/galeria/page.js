@@ -10,20 +10,67 @@ import { red } from '@mui/material/colors';
 
 
 export default function Galeria() {
+    // tracking which menu items is beiing hovered 
+    const [hoveredItem, setHoveredItem] = useState(null);
+
 
     const links = [
-        { label: 'Apartamentos', href: '/galeria/apartamentos' },
-        { label: 'Areas-comunes', href: '/galeria/areas-comunes' },
-        { label: 'Concepto', href: '/galeria/concepto' },
-        { label: 'Elevaciones', href: '/galeria/elevaciones' },
-        { label: 'Equipo', href: '/galeria/equipo' },
-        { label: 'Exteriores', href: '/galeria/exteriores' },
-        { label: 'Interiores', href: '/galeria/interiores' },
-        { label: 'Lugar', href: '/galeria/lugar' },
-        { label: 'Plan Arquitectónico', href: '/galeria/plan-arquitectonico' },
-        { label: 'Plantas', href: '/galeria/plantas' },
-        { label: 'Renders', href: '/galeria/renders' },
-        { label: 'Videos', href: '/galeria/videos' }
+        { 
+            label: 'Apartamentos', 
+            href: '/galeria/apartamentos',
+            image: '/assets/exteriores/extn02.png',
+            title: 'Apartamentos',
+            description: ''
+        },
+        { 
+            label: 'Areas comunes', 
+            href: '/galeria/areas-comunes',
+            image: '/assets/areas_comunes/04.png',
+            title: 'Area Comunes',
+            description: 'Ambientes interiores que combinan confort y diseño.'
+        },
+        { 
+            label: 'Elevaciones', 
+            href: '/galeria/elevaciones',
+            image: '/assets/elevaciones/EL-derecha-hero.png',
+            title: 'Elevaciones',
+            description: ''
+        },
+        { 
+            label: 'Exteriores', 
+            href: '/galeria/exteriores',
+            image: '/assets/exteriores/ext02.png',
+            title: 'Exteriores',
+            description: 'Descubre los exteriores modernos y elegantes del complejo.'
+        },
+        { 
+            label: 'Plan Arquitectónico', 
+            href: '/galeria/plan-arquitectonico',
+            image: '/assets/plan-arq/PA-nivel06.png',
+            title: 'Plan Arquitectónico',
+            description: ''
+        },
+        { 
+            label: 'Plantas', 
+            href: '/galeria/plantas',
+            image: '/assets/plantas/apta.png',
+            title: 'Plantas',
+            description: ''
+        },
+        { 
+            label: 'Renders', 
+            href: '/galeria/renders',
+            image: '/assets/renders/re10.png',
+            title: '',
+            description: ''
+        },
+        { 
+            label: 'Videos', 
+            href: '/galeria/videos',
+            image: '/assets/videos/Altus Residence.mp4',
+            title: '',
+            description: ''
+        }
     ];
 
     const listRef = useRef(null);
@@ -50,8 +97,8 @@ export default function Galeria() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-end',
-            // justifyContent: 'center',
-            backgroundImage: 'url(/assets/exteriores/extn02.png)',
+            // dynamically change our background
+            backgroundImage: `url(${hoveredItem?.image || '/assets/exteriores/extn02.png'})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundColor: '#f0f0f0',
@@ -62,6 +109,32 @@ export default function Galeria() {
             pt: 20
         }}
         >
+            {/* ----- */}
+            {hoveredItem && (
+                <Box
+                    sx={{
+                    position: 'absolute',
+                    top: '20%',
+                    left: '5%',
+                    width: '300px',
+                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                    color: 'white',
+                    padding: 2,
+                    borderRadius: '8px',
+                    zIndex: 10,
+                    }}
+                >
+                    <Typography variant="h6" sx={{ textTransform: 'uppercase' }}>
+                    {hoveredItem.title}
+                    </Typography>
+                    <Typography variant="body2">
+                    {hoveredItem.description}
+                    </Typography>
+                </Box>
+            )}
+
+
+            {/* ----- */}
         <Box
             sx={{
                 position: 'relative'
@@ -124,9 +197,14 @@ export default function Galeria() {
         >
 
             <List sx={{ padding: 0 }}>
-            {links.map(({ label, href }) => (
-                <ListItem key={label} disablePadding>
-                    <Link href={href} passHref style={{ textDecoration: 'none' }}>
+            {links.map((item) => (
+                <ListItem 
+                    key={item.label} 
+                    disablePadding
+                    onMouseEnter={() => setHoveredItem(item)}
+                    onMouseLeave={() => setHoveredItem(null)}
+                >
+                    <Link href={item.href} passHref style={{ textDecoration: 'none' }}>
                         <Box
                         sx={{
                             width: '300px',
@@ -156,7 +234,7 @@ export default function Galeria() {
                             textTransform: 'uppercase',
                             }}
                         >
-                            {label}
+                            {item.label}
                         </Typography>
                         </Box>
                     </Link>
