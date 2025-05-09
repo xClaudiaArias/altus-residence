@@ -18,57 +18,57 @@ export default function Galeria() {
         { 
             label: 'Apartamentos', 
             href: '/galeria/apartamentos',
-            image: '/assets/exteriores/extn02.png',
+            image: '/assets/images/apts-hero.png',
             title: 'Apartamentos',
             description: ''
         },
         { 
             label: 'Areas comunes', 
             href: '/galeria/areas-comunes',
-            image: '/assets/areas_comunes/04.png',
+            image: '/assets/images/areas-hero.png',
             title: 'Area Comunes',
             description: 'Ambientes interiores que combinan confort y diseño.'
         },
         { 
             label: 'Elevaciones', 
             href: '/galeria/elevaciones',
-            image: '/assets/elevaciones/EL-derecha-hero.png',
+            image: '/assets/images/EL-derecha-hero.png',
             title: 'Elevaciones',
             description: ''
         },
         { 
             label: 'Exteriores', 
             href: '/galeria/exteriores',
-            image: '/assets/exteriores/ext02.png',
+            image: '/assets/images/ext02.png',
             title: 'Exteriores',
             description: 'Descubre los exteriores modernos y elegantes del complejo.'
         },
         { 
             label: 'Plan Arquitectónico', 
             href: '/galeria/plan-arquitectonico',
-            image: '/assets/plan-arq/PA-nivel06.png',
+            image: '/assets/images/PA-nivel01.png',
             title: 'Plan Arquitectónico',
             description: ''
         },
         { 
             label: 'Plantas', 
             href: '/galeria/plantas',
-            image: '/assets/plantas/apta.png',
+            image: '/assets/images/pa.png',
             title: 'Plantas',
             description: ''
         },
         { 
             label: 'Renders', 
             href: '/galeria/renders',
-            image: '/assets/renders/re10.png',
-            title: '',
+            image: '/assets/images/re10.png',
+            title: 'Renders',
             description: ''
         },
         { 
             label: 'Videos', 
             href: '/galeria/videos',
-            image: '/assets/videos/Altus Residence.mp4',
-            title: '',
+            image: '/assets/images/03.png',
+            title: 'Videos',
             description: ''
         }
     ];
