@@ -20,58 +20,59 @@ export default function Galeria() {
             href: '/galeria/apartamentos',
             image: '/assets/images/apts-hero.png',
             title: 'Apartamentos',
-            description: ''
+            description: 'Unidades residenciales optimizadas en distribución y aprovechamiento del espacio.'
         },
         { 
             label: 'Areas comunes', 
             href: '/galeria/areas-comunes',
             image: '/assets/images/areas-hero.png',
             title: 'Area Comunes',
-            description: 'Ambientes interiores que combinan confort y diseño.'
+            description: 'Áreas comunes diseñadas con enfoque funcional, ergonómico y estético.'
         },
         { 
             label: 'Elevaciones', 
             href: '/galeria/elevaciones',
             image: '/assets/images/EL-derecha-hero.png',
             title: 'Elevaciones',
-            description: ''
+            description: 'Representaciones en alzado que detallan la volumetría y tratamiento de fachadas.'
         },
         { 
             label: 'Exteriores', 
             href: '/galeria/exteriores',
             image: '/assets/images/ext02.png',
             title: 'Exteriores',
-            description: 'Descubre los exteriores modernos y elegantes del complejo.'
+            description: 'Vistas exteriores que integran diseño urbano con elementos naturales.'
         },
         { 
             label: 'Plan Arquitectónico', 
             href: '/galeria/plan-arquitectonico',
             image: '/assets/images/PA-nivel01.png',
             title: 'Plan Arquitectónico',
-            description: ''
+            description: 'Plano maestro que ilustra zonificación, accesos y articulación del conjunto.'
         },
         { 
             label: 'Plantas', 
             href: '/galeria/plantas',
             image: '/assets/images/pa.png',
             title: 'Plantas',
-            description: ''
+            description: 'Plantas arquitectónicas detalladas con escalas y distribuciones por nivel.'
         },
         { 
             label: 'Renders', 
             href: '/galeria/renders',
             image: '/assets/images/re10.png',
             title: 'Renders',
-            description: ''
+            description: 'Modelos 3D fotorrealistas generados para validar la propuesta estética.'
         },
         { 
             label: 'Videos', 
             href: '/galeria/videos',
             image: '/assets/images/03.png',
             title: 'Videos',
-            description: ''
+            description: 'Material audiovisual que complementa la comprensión espacial del proyecto.'
         }
     ];
+    
 
     const listRef = useRef(null);
     const [showScrollTop, setShowScrollTop] = useState(false);
@@ -114,20 +115,27 @@ export default function Galeria() {
                 <Box
                     sx={{
                     position: 'absolute',
-                    top: '20%',
+                    top: '70%',
                     left: '5%',
-                    width: '300px',
-                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                    width: '400px',
+                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
                     color: 'white',
                     padding: 2,
-                    borderRadius: '8px',
                     zIndex: 10,
+                    textAlign: 'left'
                     }}
                 >
-                    <Typography variant="h6" sx={{ textTransform: 'uppercase' }}>
+                    <Typography variant="h6" sx={{ textTransform: 'uppercase', fontSize: '15px', fontWeight: 300, mb: 1 }}>
                     {hoveredItem.title}
                     </Typography>
-                    <Typography variant="body2">
+                    <Divider
+                        sx={{
+                            backgroundColor: '#fff',
+                            height: '1px',
+                            width: '20px',
+                        }}
+                    />
+                    <Typography variant="body2" sx={{ fontSize: '13px', fontWeight: '100', mt: 2}}>
                     {hoveredItem.description}
                     </Typography>
                 </Box>
