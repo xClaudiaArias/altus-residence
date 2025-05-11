@@ -1,7 +1,7 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Box, Input, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, TextField } from "@mui/material";
 import Image from 'next/image'
 import Link from 'next/link';
 
@@ -77,13 +77,11 @@ export default function Footer () {
                 sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    border: '1px dashed red',
                     height: '120px'
                 }}
             >
                 <Box
                     sx={{
-                        border: '1px solid white',
                         flex: 1,
                         display: 'flex',
                         flexDirection: 'column'
@@ -130,12 +128,44 @@ export default function Footer () {
                 <Box
                     sx={{
                         flex: 2,
-                        border: '1px solid yellow'
+                        display: 'flex',
+                        justifyContent: 'space-between'
                     }}
                 >
-                    <Typography>Subscirbete a nuestro boletin informativo</Typography>
-                    <Input />
-                    <Button>Subscribir</Button>
+                    <Typography
+                        sx={{
+                            fontSize: '12px',
+                            fontWeight: '100',
+                            width: '140px',
+                            px: 2,
+                            flex: 1
+                        }}
+                    >Subscirbete a nuestro boletin informativo</Typography>
+                    <TextField class="filled-basic" variant="filled" 
+                    sx={{
+                        backgroundColor: 'rgb(39, 39, 39)',
+                        height: '25px',
+                        color: '#fff',
+                        flex: 2
+                    }}/>
+                    <Box
+                        sx={{
+                            flex: 1,
+                            display: 'flex',
+                            alignItems: 'start',
+                            justifyContent: 'center'
+                        }}
+                    >
+                        <Button
+                            sx={{
+                                backgroundColor: "#fff",
+                                color: "#000",
+                                px: 3
+                            }}
+                        >
+                            Subscribir
+                        </Button>
+                    </Box>
                 </Box>
 
             </Box>
