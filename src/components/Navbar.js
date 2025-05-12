@@ -42,7 +42,7 @@ export default function Navbar () {
                     </Link>
                 </Button>
                 <Button color="inherit" sx={{ ml: 8, px: 0}}>
-                    <Link href="/galeria" style={{ textDecoration: 'none', color: isAcerca ? '#000' : '#fff', fontWeight: isGaleria ? 'bold' : 'normal', letterSpacing: 2  }}>
+                    <Link href="/galeria" style={{ textDecoration: 'none', color: isAcerca ? '#000' : '#fff', fontWeight: isGaleria ? 'bold' : 'normal', letterSpacing: 2, mixBlendMode: isGaleria ? 'exclusion' : 'normal'  }}>
                         Galería
                     </Link>
                 </Button>

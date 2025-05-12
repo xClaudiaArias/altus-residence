@@ -141,7 +141,7 @@ export default function Footer () {
                             flex: 1
                         }}
                     >Subscirbete a nuestro boletin informativo</Typography>
-                    <TextField class="filled-basic" variant="filled" 
+                    <TextField className="filled-basic" variant="filled" 
                     sx={{
                         backgroundColor: 'rgb(39, 39, 39)',
                         height: '25px',

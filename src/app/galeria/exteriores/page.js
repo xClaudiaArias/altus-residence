@@ -1,190 +1,212 @@
 'use client';
 
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 import {
-    Box,
-    MobileStepper,
-    Paper,
-    Typography,
-    Button,
-    IconButton
+  Box,
+  IconButton,
+  Typography,
 } from '@mui/material';
-import {
-    KeyboardArrowLeft,
-    KeyboardArrowRight,
-} from '@mui/icons-material';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Link from 'next/link';
 
 const images = [
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext01.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext02.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext03.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext04.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext05.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext06.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext07.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext08.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext09.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/ext10.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/extn01.png',
-    },
-    {
-        label: 'Exteriores',
-        imgPath: '/assets/exteriores/extn02.png',
-    },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext01.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext02.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext03.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext04.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext05.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext06.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext07.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext08.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext09.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/ext10.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/extn01.png',
+  },
+  {
+      label: 'Exteriores',
+      imgPath: '/assets/exteriores/extn02.png',
+  },
 ]
 
-export default function Page() {
-    const [activeStep, setActiveStep] = useState(0);
-    const maxSteps = images.length;
+export default function Slideshow() {
+  const [emblaRef, embla] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const handleNext = () => setActiveStep((prev) => (prev + 1) % maxSteps);
-    const handleBack = () => setActiveStep((prev) => (prev - 1) + maxSteps) % maxSteps; 
-    const handleStepChange = (step) => setActiveStep(step);
+  const scrollPrev = useCallback(() => embla?.scrollPrev(), [embla]);
+  const scrollNext = useCallback(() => embla?.scrollNext(), [embla]);
 
-    return (
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+  }, [embla]);
+
+  useEffect(() => {
+    if (!embla) return;
+    embla.on('select', onSelect);
+    onSelect();
+  }, [embla, onSelect]);
+
+  return (
+    <Box
+      sx={{
+        width: '100vw',
+        height: '100vh',
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundColor: "white"
+      }}
+    >
+      {/* slideshow */}
+      <Box
+        ref={emblaRef}
+        sx={{
+          height: '100%',
+          width: '100%',
+          overflow: 'hidden',
+        }}
+      >
         <Box
           sx={{
-            position: 'relative',
-            height: '100vh',
-            width: '100vw',
-            overflow: 'hidden',
-            zIndex: 0, // sits behind navbar if navbar is zIndex > 0
+            display: 'flex',
+            height: '100%',
           }}
         >
-          {/* Swipeable Image Views */}
-          <AutoPlaySwipeableViews
-            index={activeStep}
-            onChangeIndex={handleStepChange}
-            enableMouseEvents
-            style={{ height: '100%', width: '100%' }}
-          >
-            {images.map((step, index) => (
+          {images.map((image, idx) => (
+            <Box
+              key={idx}
+              sx={{
+                flex: '0 0 100%',
+                height: '100%',
+                position: 'relative',
+                backgroundColor: "#fff"
+              }}
+            >
               <Box
-                key={step.label}
                 component="img"
-                src={step.imgPath}
-                alt={step.label}
+                src={image.imgPath}
+                alt={image.label}
                 sx={{
-                  height: '100vh',
-                  width: '100vw',
-                  objectFit: 'cover',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'fill'
                 }}
               />
-            ))}
-          </AutoPlaySwipeableViews>
-    
-          {/* Overlayed Controls */}
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              px: 2,
-              zIndex: 10,
-              pointerEvents: 'none', // allow image swipe
-            }}
-          >
-            <IconButton
-              onClick={handleBack}
-              sx={{
-                color: 'white',
-                mixBlendMode: 'exclusion',
-                pointerEvents: 'auto',
-                backgroundColor: 'rgba(0,0,0,0.3)',
-                '&:hover': { backgroundColor: 'rgba(0,0,0,0.5)' },
-              }}
-            >
-              <KeyboardArrowLeft fontSize="large" />
-            </IconButton>
-    
-            <IconButton
-              onClick={handleNext}
-              sx={{
-                color: 'white',
-                mixBlendMode: 'exclusion',
-                pointerEvents: 'auto',
-                backgroundColor: 'rgba(0,0,0,0.3)',
-                '&:hover': { backgroundColor: 'rgba(0,0,0,0.5)' },
-              }}
-            >
-              <KeyboardArrowRight fontSize="large" />
-            </IconButton>
-          </Box>
-    
-          <Box
-  sx={{
-    position: 'absolute',
-    bottom: 60,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    display: 'flex',
-    gap: 1.5,
-    zIndex: 10,
-    mixBlendMode: 'exclusion',
-  }}
->
-  {images.map((_, index) => (
-    <Button
-      key={index}
-      onClick={() => setActiveStep(index)}
-      sx={{
-        minWidth: 0,
-        p: 0.5,
-        borderRadius: '50%',
-        backgroundColor: index === activeStep ? 'white' : 'rgba(255,255,255,0.3)',
-        '&:hover': {
-          backgroundColor: 'white',
-        },
-        transition: 'all 0.3s ease',
-      }}
-    />
-  ))}
-</Box>
-
+            </Box>
+          ))}
         </Box>
-      );
-    }
+      </Box>
+
+      {/* left and right arws */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: 0,
+          right: 0,
+          transform: 'translateY(-50%)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          px: 6,
+          zIndex: 2,
+        }}
+      >
+        <IconButton onClick={scrollPrev} sx={{ color: 'white', backgroundColor: 'rgba(0, 0, 0, 0.36)'}}>
+          <ArrowBackIcon fontSize="large"/>
+        </IconButton>
+        <IconButton onClick={scrollNext} sx={{ color: 'white', backgroundColor: 'rgba(0, 0, 0, 0.36)'}}>
+          <ArrowForwardIcon fontSize="large"/>
+        </IconButton>
+      </Box>
+
+      {/* info box */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: 24,
+          left: 24,
+          color: 'white',
+          padding: 2,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          borderRadius: 2,
+          maxWidth: '80%',
+
+        }}
+      >
+        <Link href="/galeria">
+          <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline'}}>
+            <ArrowBackIcon />
+            Volver al menú anterior
+            </Typography>
+        </Link>
+      </Box>
+
+      {/* img counter */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: 24,
+          right: 24,
+          color: 'white',
+          padding: '6px 12px',
+          borderRadius: '8px',
+          backgroundColor: 'rgba(0, 0, 0, 0.36)',
+          px: 4,
+          textAlign: 'right'
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: '16px',
+            fontWeight: '100',
+            textTransform: 'uppercase'
+          }}
+        >
+          {images[selectedIndex].label}
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: '30px',
+            fontWeight: '100'
+          }}
+        >
+          {selectedIndex + 1}/{images.length}
+        </Typography>
+      </Box>
+    </Box>
+  );
+}
