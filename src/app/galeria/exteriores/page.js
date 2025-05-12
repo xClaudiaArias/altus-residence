@@ -81,6 +81,21 @@ export default function Slideshow() {
     onSelect();
   }, [embla, onSelect]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowLeft') {
+        scrollPrev();
+      } else if (event.key === 'ArrowRight') {
+        scrollNext();
+      }
+    };
+  
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [scrollPrev, scrollNext]);
+
   return (
     <Box
       sx={{
