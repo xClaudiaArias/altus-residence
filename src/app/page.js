@@ -249,7 +249,7 @@ export default function Inicio() {
               objectPosition: 'top',
           }}/>
           <Typography variant="body1" sx={{ width: '75%', mb: 2, fontSize: '10px', textAlign: 'center', fontWeight: 300 }}>
-            <em>"Con Altus, estamos escribiendo un nuevo capitulo para la ciudad de Santiago"</em>
+            <em>Con Altus, estamos escribiendo un nuevo capitulo para la ciudad de Santiago</em>
           </Typography>
         </Box>
 
