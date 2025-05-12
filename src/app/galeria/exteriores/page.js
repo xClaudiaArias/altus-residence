@@ -95,6 +95,8 @@ export default function Slideshow() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [scrollPrev, scrollNext]);
+  
+  
 
   return (
     <Box
@@ -160,10 +162,28 @@ export default function Slideshow() {
           zIndex: 2,
         }}
       >
-        <IconButton onClick={scrollPrev} sx={{ color: 'white', backgroundColor: 'rgba(0, 0, 0, 0.36)'}}>
+        <IconButton onClick={scrollPrev} 
+        sx={{ 
+          color: 'white', 
+          backgroundColor: 'rgba(0, 0, 0, 0.36)',
+          mixBlendMode: 'exclusion',
+          '&:focus-visible': {
+            outline: '2px solid white',
+            outlineOffset: '2px',
+          }
+          }}>
           <ArrowBackIcon fontSize="large"/>
         </IconButton>
-        <IconButton onClick={scrollNext} sx={{ color: 'white', backgroundColor: 'rgba(0, 0, 0, 0.36)'}}>
+        <IconButton onClick={scrollNext} 
+          sx={{
+            color: 'white',
+            backgroundColor: 'rgba(0, 0, 0, 0.36)',
+            mixBlendMode: 'exclusion',
+            '&:focus-visible': {
+              outline: '2px solid white',
+              outlineOffset: '2px',
+            },
+          }}>
           <ArrowForwardIcon fontSize="large"/>
         </IconButton>
       </Box>
