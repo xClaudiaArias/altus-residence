@@ -15,55 +15,55 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/01_vrpf4h.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/02.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237972/02_f3gkcc.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/03.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/03_jz69il.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/04.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/04_yyahyo.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/05.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/05_h65x2a.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/06.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/06_bzgszw.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/07.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237979/07_zk58zn.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/08.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237979/08_ils9oo.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/09.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237978/09_okcbax.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/10.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237981/10_cfz0lv.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/11.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237979/11_ix4m8u.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/12.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237980/12_hfmjg4.png',
     },
     {
         label: 'Areas Comunes',
-        imgPath: '/assets/areas_comunes/13.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237981/13_v5addg.png',
     },
 ]
 

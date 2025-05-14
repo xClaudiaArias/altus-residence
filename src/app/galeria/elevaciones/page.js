@@ -15,19 +15,19 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Elevaciones | Derecha',
-        imgPath: '/assets/elevaciones/EL-derecha.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238247/EL-derecha_lb8ryt.png',
     },
     {
         label: 'Elevaciones | Frontal',
-        imgPath: '/assets/elevaciones/EL-frontal.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238247/EL-frontal_vmgxh1.png',
     },
     {
         label: 'Elevaciones | Izquierda',
-        imgPath: '/assets/elevaciones/EL-left.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238247/EL-left_jzw5fq.png',
     },
     {
         label: 'Elevaciones | Posterior',
-        imgPath: '/assets/elevaciones/EL-posterior.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238247/EL-posterior_ygtoac.png',
     },
 ]
 

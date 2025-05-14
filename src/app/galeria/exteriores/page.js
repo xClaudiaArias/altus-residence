@@ -15,51 +15,51 @@ import Link from 'next/link';
 const images = [
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext01.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238339/ext01_ug9mrs.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext02.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238341/ext02_d9hazf.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext03.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238341/ext03_nrhapz.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext04.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238339/ext04_ub4fcq.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext05.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238338/ext05_inz1as.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext06.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238338/ext06_l0exij.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext07.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238345/ext07_aepgzj.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext08.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238345/ext08_qz8ba4.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext09.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238347/ext09_fom8ia.png/assets/exteriores/ext09.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/ext10.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238345/ext10_zepo4f.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/extn01.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238346/extn01_tzdvqr.png',
   },
   {
       label: 'Exteriores',
-      imgPath: '/assets/exteriores/extn02.png',
+      imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238346/extn02_atdzu2.png',
   },
 ]
 

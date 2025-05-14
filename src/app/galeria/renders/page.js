@@ -15,43 +15,43 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re01_xu86tj.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re02.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re02_ocsbvr.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re03.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re03_bpaemb.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re04.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re04_nglzmb.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re05.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238799/re05_xnpf4u.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re06.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238798/re06_wb77lo.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re07.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238805/re07_wkmtg3.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re08.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238805/re08_z0zajj.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re09.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238806/re09_mhnyin.png',
     },
     {
         label: 'Renders',
-        imgPath: '/assets/renders/re10.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238807/re10_rfqu7a.png',
     },
 ]
 

@@ -12,14 +12,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 
-const images = [
+const videos = [
     {
         label: 'Altus Residence',
-        src: '/assets/videos/AltusResidence.mp4',
+        src: 'https://www.youtube.com/embed/zMlN_uli6po?si=xtkecpMvapmHPiW6?modestbranding=1&rel=0',
     },
     {
         label: 'Recorrido Virtual',
-        src: '/assets/videos/ALTUSVIDEORECORRIDO-18-03-2025.mp4',
+        src: 'https://www.youtube.com/embed/chR6ppBatz8?si=HwKNlnb3X4LKUhEw?modestbranding=1&rel=0',
     },
 ]
 
@@ -65,7 +65,7 @@ const images = [
             height: '100vh',
             position: 'relative',
             overflow: 'hidden',
-            backgroundColor: "white"
+            backgroundColor: "black",
         }}
         >
         {/* slideshow */}
@@ -75,32 +75,39 @@ const images = [
             height: '100%',
             width: '100%',
             overflow: 'hidden',
+            backgroundColor: 'black'
             }}
         >
             <Box
             sx={{
                 display: 'flex',
                 height: '100%',
+                backgroundColor: "black"
             }}
             >
-            {images.map((image, idx) => (
+            {videos.map((video, idx) => (
                 <Box
                 key={idx}
                 sx={{
                     flex: '0 0 100%',
                     height: '100%',
                     position: 'relative',
-                    backgroundColor: "#fff"
+                    backgroundColor: "#000"
                 }}
                 >
                 <Box
-                    component="video"
-                    src={image.src}
-                    controls
-                    muted
+                    component="iframe"
+                    width="100%"
+                    height="100%"
+                    src={`${video.src}?modestbranding=1&rel=0`}
+                    title={video.label}
+                    frameBorder={0}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     sx={{
-                    height: '100%',
-                    width: '100%',
+                        width: '100%',
+                        height: '90%',
+                        mt: 10
                     }}
                 />
                 </Box>
@@ -192,7 +199,7 @@ const images = [
                 textTransform: 'uppercase'
             }}
             >
-            {images[selectedIndex].label}
+            {videos[selectedIndex].label}
             </Typography>
             <Typography
             sx={{
@@ -200,7 +207,7 @@ const images = [
                 fontWeight: '100'
             }}
             >
-            {selectedIndex + 1}/{images.length}
+            {selectedIndex + 1}/{videos.length}
             </Typography>
         </Box>
         </Box>

@@ -15,63 +15,63 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084162/A01_vsqhw4.png',
     },
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A02.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A02_lalidi.png',
     },
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A03.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A03_frsku5.png',
     },
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A05.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A05_osshtc.png',
     },
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A06.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084167/A06_bg6jkz.png',
     },
     {
         label: 'Apartamentos A',
-        imgPath: '/assets/apts/a/A07.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A07_lr4vnf.png',
     },
     {
         label: 'Apartamentos B',
-        imgPath: '/assets/apts/b/B01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084216/B01_uwer8b.png',
     },
     {
         label: 'Apartamentos B',
-        imgPath: '/assets/apts/b/B02.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084215/B02_ovpzk7.png',
     },
     {
         label: 'Apartamentos B',
-        imgPath: '/assets/apts/b/B03.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084215/B03_n2vxvl.png',
     },
     {
         label: 'Apartamentos B',
-        imgPath: '/assets/apts/b/B04.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084216/B04_ihr2hc.png',
     },
     {
         label: 'Apartamentos B',
-        imgPath: '/assets/apts/b/B05.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084216/B05_zszsxn.png',
     },
     {
         label: 'Apartamentos C',
-        imgPath: '/assets/apts/c/C01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084236/C01_sv9j16.png',
     },
     {
         label: 'Apartamentos C',
-        imgPath: '/assets/apts/c/C02.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084238/C02_yqw10o.png',
     },
     {
         label: 'Apartamentos C',
-        imgPath: '/assets/apts/c/C03.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084237/C03_vilp5m.png',
     },
     {
         label: 'Apartamentos C',
-        imgPath: '/assets/apts/c/C04.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084237/C04_dfhugn.png',
     },
     ]
 

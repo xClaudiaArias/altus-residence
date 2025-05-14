@@ -15,19 +15,19 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Plantas | Apt A',
-        imgPath: '/assets/plantas/apta.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248503/apta_no201y.png',
     },
     {
         label: 'Plantas | Apt B',
-        imgPath: '/assets/plantas/aptb.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248506/aptc_vnk9yt.png',
     },
     {
         label: 'Plantas | Apt C',
-        imgPath: '/assets/plantas/aptc.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248504/aptb_cvy7gq.png',
     },
     {
         label: 'Plantas | Apt D',
-        imgPath: '/assets/plantas/aptd.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248356/aptd_im54zk.png',
     },
 ]
 

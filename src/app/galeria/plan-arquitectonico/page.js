@@ -15,31 +15,31 @@ import Link from 'next/link';
 const images = [
     {
         label: 'Plan Arquitectónico | Nivel 01',
-        imgPath: '/assets/plan-arq/PA-nivel01.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238566/PA-nivel01_wtz2y3.png',
     },
     {
         label: 'Plan Arquitectónico | Nivel 02 - 05',
-        imgPath: '/assets/plan-arq/PA-nivel2-5.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238566/PA-nivel2-5_yqehzc.png',
     },
     {
         label: 'Plan Arquitectónico | Nivel 06',
-        imgPath: '/assets/plan-arq/PA-nivel06.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238566/PA-nivel06_obnf3p.png',
     },
     {
         label: 'Plan Arquitectónico | Nivel 07',
-        imgPath: '/assets/plan-arq/PA-nivel07.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238567/PA-nivel07_nzqykw.png',
     },
     {
         label: 'Plan Arquitectónico | Niveles',
-        imgPath: '/assets/plan-arq/PA-niveles.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238572/PA-niveles_htrqaa.png',
     },
     {
         label: 'Plan Arquitectónico | Rooftop',
-        imgPath: '/assets/plan-arq/PA-rooftop.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238572/PA-rooftop_rk1qyi.png',
     },
     {
         label: 'Plan Arquitectónico | Sótano',
-        imgPath: '/assets/plan-arq/PA-sotano.png',
+        imgPath: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238572/PA-sotano_v4rfwo.png',
     },
 ]
 

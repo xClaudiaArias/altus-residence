@@ -240,7 +240,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
             }}
         >
             <Image
-                src="/assets/images/hero01.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/01_vrpf4h.png"
                 alt="Altus Residence"
                 width={800}
                 height={700}
@@ -248,7 +248,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/exteriores/ext01.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238346/extn01_tzdvqr.png"
                 alt="Altus Residence"
                 width={750}
                 height={700}
@@ -256,7 +256,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/exteriores/ext02.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238339/ext04_ub4fcq.png"
                 alt="Altus Residence"
                 width={800}
                 height={600}
@@ -264,7 +264,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/renders/re10.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237981/13_v5addg.png"
                 alt="Altus Residence"
                 width={700}
                 height={700}
@@ -272,15 +272,15 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/exteriores/ext04.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238338/ext06_l0exij.png"
                 alt="Altus Residence"
                 width={500}
                 height={600}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
-                        <Image
-                src="/assets/renders/re01.png"
+            <Image
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084237/C04_dfhugn.png"
                 alt="Altus Residence"
                 width={800}
                 height={600}
@@ -288,7 +288,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/areas_comunes/02.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/03_jz69il.png"
                 alt="Altus Residence"
                 width={725}
                 height={700}
@@ -296,7 +296,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/apts/a/A01.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084162/A01_vsqhw4.png"
                 alt="Altus Residence"
                 width={600}
                 height={700}
@@ -304,7 +304,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/apts/a/A03.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A03_frsku5.png"
                 alt="Altus Residence"
                 width={800}
                 height={600}
@@ -312,7 +312,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/areas_comunes/07.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238806/re09_mhnyin.pngg"
                 alt="Altus Residence"
                 width={600}
                 height={500}
@@ -320,7 +320,7 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="/assets/areas_comunes/11.png"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re02_ocsbvr.png"
                 alt="Altus Residence"
                 width={800}
                 height={700}

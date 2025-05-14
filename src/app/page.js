@@ -19,7 +19,7 @@ export default function Inicio() {
           justifyContent: 'center', 
           alignItems: 'flex-end',
           backgroundColor: '#f0f0f0',
-          backgroundImage: 'url(/assets/images/1x/Artboard1.png)',
+          backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239186/Artboard1_yskeso.png)',
           backgroundSize: '100% 100%',
           backgroundPosition: 'center', 
           color: 'white',
@@ -134,23 +134,23 @@ export default function Inicio() {
           }}>
             <Box
             component={'img'}
-            src="/assets/images/bird-view.png"
+            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239025/bird-view_x11m1t.png"
             alt="Logo"
             sx={{
               width: '100%',
-              height: '400px',
+              height: '600px',
               borderRadius: 1,
             }}/>
-            <Typography variant="body1" sx={{ width: '100%', mb: 2, fontSize: '11px', textAlign: 'center', fontWeight: 300 }}>
+            <Typography variant="body1" sx={{ width: '100%', mb: 2, fontSize: '12px', textAlign: 'center', fontWeight: 300 }}>
               Cerros de Gurabo, Santiago de Los Caballeros, Republica Dominicana.
             </Typography>
           </Box>
         {/* right side  */}
         <Box sx={{ width: '50%', pl: 8 }}>
-          <Typography variant="h6" sx={{ mb: 2, textTransform: 'uppercase', fontSize: '14px', fontWeight: 700 }}>
+          <Typography variant="h6" sx={{ mb: 2, textTransform: 'uppercase', fontSize: '18px', fontWeight: 700 }}>
             Altus Residence
           </Typography>
-          <Typography variant="body1" sx={{ mb: 2, fontSize: '12px', fontWeight: 200 }}>
+          <Typography variant="body1" sx={{ mb: 2, fontSize: '16px', fontWeight: 200 }}>
             Elevando la vida a nuevas <strong>altu</strong>ra<strong>s</strong>
             <br></br>
             donde la exclusividad y el lujo se encuentran en perfecta armonía.
@@ -161,7 +161,7 @@ export default function Inicio() {
                 mt: 2, 
                 backgroundColor: '#000', 
                 color: '#fff', 
-                fontSize: '11px', 
+                fontSize: '16px', 
                 fontWeight: 700,
                 '&:hover': {
                   backgroundColor: '#333',
