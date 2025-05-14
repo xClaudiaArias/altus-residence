@@ -35,7 +35,7 @@ export default function Footer () {
                     }}
                 >
                     <Image
-                        src="/assets/logos/altus-logo.png"
+                        src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/altus-logo_qpsbia.png"
                         width={100}
                         height={50}
                         alt="Altus logo"
@@ -46,7 +46,7 @@ export default function Footer () {
                         }}
                     />
                     <Image
-                        src="/assets/logos/vict-logo.png"
+                        src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png"
                         width={100}
                         height={50}
                         alt="Victlan Logo"

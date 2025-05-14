@@ -193,7 +193,7 @@ export default function Inicio() {
         {/* left side  */}
         <Box sx={{ width: '50%', pl: 4, display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
           <Image
-            src="/assets/logos/vict-logo.png"
+            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png"
             alt="Logo"
             width={400}
             height={200}

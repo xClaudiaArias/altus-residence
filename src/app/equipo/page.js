@@ -99,7 +99,7 @@ export default function Equipo() {
                 </Box>
                 <Box>
                     {/* right  */}
-                    <Image src="/assets/headshots/01.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 80%', borderRadius: 2}}></Image>
+                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249331/01_cjvz3e.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 80%', borderRadius: 2}}></Image>
                 </Box>
             </Box>
 
