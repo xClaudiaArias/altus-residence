@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/logos/logoicon.png" />
+        <link rel="icon" href="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/logoicon_jiqeei.png" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </head>
       <body className={inter.className}>

@@ -73,7 +73,7 @@ const images = [
             height: '100vh',
             position: 'relative',
             overflow: 'hidden',
-            backgroundColor: "white"
+            backgroundColor: "black"
         }}
         >
         {/* slideshow */}
@@ -98,7 +98,7 @@ const images = [
                     flex: '0 0 100%',
                     height: '100%',
                     position: 'relative',
-                    backgroundColor: "#fff"
+                    backgroundColor: "#000"
                 }}
                 >
                 <Box

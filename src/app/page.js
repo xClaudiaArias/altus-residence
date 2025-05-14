@@ -52,7 +52,7 @@ export default function Inicio() {
               backgroundColor: '#fff',
               height: '1px',
               width: '60px',
-              mt: 40
+              mt: 50
             }}
           />
           <Typography sx={{
@@ -82,7 +82,7 @@ export default function Inicio() {
         >
           <Box
             component={'img'}
-            src="/assets/logos/altus-logo.png"
+            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/altus-logo_qpsbia.png"
             alt="Logo"
             sx={{
               width: '200px',
@@ -96,7 +96,7 @@ export default function Inicio() {
           />
           <Box
             component={'img'}
-            src="/assets/logos/vict-logo.png"
+            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png"
             alt="Logo"
             sx={{
               width: '150px',
@@ -205,7 +205,7 @@ export default function Inicio() {
             }}
           />
 
-          <Typography variant="body1" sx={{ mb: 2, fontSize: '12px', fontWeight: 400, color: '#fff', textAlign: 'center' }}>
+          <Typography variant="body1" sx={{ mb: 2, fontSize: '16px', fontWeight: 400, color: '#fff', textAlign: 'center' }}>
             Nuestra misión es crear espacios que inpiren, que conecten el presente pero sobre todo que miren con firmeza hacia el futuro.
           </Typography>
           <Link href="/equipo">
@@ -214,7 +214,7 @@ export default function Inicio() {
                 mt: 2, 
                 backgroundColor: '#fff', 
                 color: '#000', 
-                fontSize: '11px', 
+                fontSize: '16px', 
                 fontWeight: 700,
                 '&:hover': {
                   backgroundColor: '#e0e0e0',
@@ -239,16 +239,17 @@ export default function Inicio() {
         }}>
           <Box
             component={'img'}
-            src="/assets/headshots/02.jpg"
+            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249331/02_yervjy.jpg"
             alt="Logo"
             sx={{
-              width: '100%',
-              height: '500px',
+              width: '600px',
+              height: '800px',
               borderRadius: 1, 
-              objectFit: 'contain',
-              objectPosition: 'top',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              mt: 4
           }}/>
-          <Typography variant="body1" sx={{ width: '75%', mb: 2, fontSize: '10px', textAlign: 'center', fontWeight: 300 }}>
+          <Typography variant="body1" sx={{ width: '75%', mb: 2, fontSize: '14px', textAlign: 'center', fontWeight: 300 }}>
             <em>Con Altus, estamos escribiendo un nuevo capitulo para la ciudad de Santiago</em>
           </Typography>
         </Box>

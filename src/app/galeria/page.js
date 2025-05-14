@@ -23,34 +23,34 @@ export default function Galeria() {
         { 
             label: 'Elevaciones', 
             href: '/galeria/elevaciones',
-            image: '/assets/images/EL-derecha-hero.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239018/EL-derecha-hero_s2wznz.png',
             title: 'Elevaciones',
             description: 'Representaciones en alzado que detallan la volumetría y tratamiento de fachadas.'
         },
         { 
             label: 'Exteriores', 
             href: '/galeria/exteriores',
-            image: '/assets/images/ext02.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239021/ext02_dwvvce.png',
             title: 'Exteriores',
             description: 'Vistas exteriores que integran diseño urbano con elementos naturales.'
         },
         { 
             label: 'Interiores', 
             href: '/galeria/Interiores',
-            image: '/assets/images/B04.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747250878/03_nwwphg.png',
             title: 'Interiores',
             description: 'Unidades residenciales optimizadas en distribución y aprovechamiento del espacio.',
             children: [
                 {
                     label: 'Apartamentos',
                     href: '/galeria/apartamentos',
-                    image: '/assets/images/apts-hero.png',
+                    image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239018/apts-hero_czfich.png',
                     title: 'Apartamentos',
                     description: 'Departamentos modernos, funcionales y llenos de luz natural.'
                 },
                 {
                     label: 'Áreas Comunes',
-                    href: '/galeria/areas-comunes',
+                    href: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239019/areas-hero_k7bnui.png',
                     image: '/assets/images/areas-hero.png',
                     title: 'Áreas Comunes',
                     description: 'Ambientes interiores que combinan confort y diseño.'
@@ -60,28 +60,28 @@ export default function Galeria() {
         { 
             label: 'Plan Arquitectónico', 
             href: '/galeria/plan-arquitectonico',
-            image: '/assets/images/PA-nivel01.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239023/PA-nivel01_kprbe4.png',
             title: 'Plan Arquitectónico',
             description: 'Plano maestro que ilustra zonificación, accesos y articulación del conjunto.'
         },
         { 
             label: 'Plantas', 
             href: '/galeria/plantas',
-            image: '/assets/images/pa.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747251275/pa_eyur4z.png',
             title: 'Plantas',
             description: 'Plantas arquitectónicas detalladas con escalas y distribuciones por nivel.'
         },
         { 
             label: 'Renders', 
             href: '/galeria/renders',
-            image: '/assets/images/re10.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239027/re10_bwawak.png',
             title: 'Renders',
             description: 'Modelos 3D fotorrealistas generados para validar la propuesta estética.'
         },
         { 
             label: 'Videos', 
             href: '/galeria/videos',
-            image: '/assets/images/03.png',
+            image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747251702/montage1_l7vbzg.png',
             title: 'Videos',
             description: 'Material audiovisual que complementa la comprensión espacial del proyecto.'
         }
@@ -113,7 +113,7 @@ export default function Galeria() {
             flexDirection: 'column',
             alignItems: 'flex-end',
             // dynamically change our background
-            backgroundImage: `url(${hoveredItem?.image || '/assets/exteriores/extn02.png'})`,
+            backgroundImage: `url(${hoveredItem?.image || 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239023/gal01_mdhfq3.png'})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundColor: '#f0f0f0',
@@ -132,14 +132,14 @@ export default function Galeria() {
                     top: '70%',
                     left: '5%',
                     width: '400px',
-                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
                     color: 'white',
                     padding: 2,
                     zIndex: 10,
                     textAlign: 'left'
                     }}
                 >
-                    <Typography variant="h6" sx={{ textTransform: 'uppercase', fontSize: '15px', fontWeight: 300, mb: 1 }}>
+                    <Typography variant="h6" sx={{ textTransform: 'uppercase', fontSize: '18px', fontWeight: 300, mb: 1 }}>
                     {hoveredItem.title}
                     </Typography>
                     <Divider
@@ -149,7 +149,7 @@ export default function Galeria() {
                             width: '20px',
                         }}
                     />
-                    <Typography variant="body2" sx={{ fontSize: '13px', fontWeight: '100', mt: 2}}>
+                    <Typography variant="body2" sx={{ fontSize: '16px', fontWeight: '100', mt: 2}}>
                     {hoveredItem.description}
                     </Typography>
                 </Box>
@@ -169,14 +169,14 @@ export default function Galeria() {
                 mb: 2,
                 textAlign: 'right',
                 color: 'white',
-                fontSize: '1rem',
+                fontSize: '1.6rem',
                 textTransform: 'uppercase',
                 }}
             >
                 Menu de Galeria
             </Typography>
 
-            <Divider sx={{ backgroundColor: '#fff', height: '1px', width: '300px', mb: 2 }} />
+            <Divider sx={{ backgroundColor: '#fff', height: '2px', width: '300px', mb: 2 }} />
 
         <Box
             sx={{
@@ -210,11 +210,16 @@ export default function Galeria() {
             ref={listRef}
             onScroll={handleScroll}
             sx={{
-            height: 220,
+            height: 250,
             overflowY: 'auto',
             scrollBehavior: 'smooth',
             width: '300px',
             position: 'relative',
+                '&::-webkit-scrollbar': {
+                    display: 'none',
+                },
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
             }}
         >
 
@@ -256,20 +261,20 @@ export default function Galeria() {
                     {dropdownOpen ? (
                         <ArrowDownwardIcon
                         className="arrow"
-                        fontSize="13px"
+                        fontSize="16px"
                         sx={{ transition: 'transform 0.3s ease' }}
                         />
                     ) : (
                         <ArrowForwardIcon
                         className="arrow"
-                        fontSize="13px"
+                        fontSize="16px"
                         sx={{ transition: 'transform 0.3s ease' }}
                         />
                     )}
                     <Typography
                         sx={{
                         fontWeight: 100,
-                        fontSize: '13px',
+                        fontSize: '16px',
                         textTransform: 'uppercase',
                         }}
                     >
@@ -301,13 +306,13 @@ export default function Galeria() {
                     >
                         <ArrowForwardIcon
                         className="arrow"
-                        fontSize="13px"
+                        fontSize="16px"
                         sx={{ transition: 'transform 0.3s ease' }}
                         />
                         <Typography
                         sx={{
                             fontWeight: 100,
-                            fontSize: '13px',
+                            fontSize: '16px',
                             textTransform: 'uppercase',
                         }}
                         >
@@ -338,10 +343,9 @@ export default function Galeria() {
                             justifyContent: 'flex-end',
                             gap: 1,
                             backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                            // border: '1px, solid red',
                             cursor: 'pointer',
                             textAlign: 'right',
-                            fontSize: '13px',
+                            fontSize: '16px',
                             py: 1,
                             borderBottom: '1px solid white',
                             pl: 2,
@@ -354,11 +358,11 @@ export default function Galeria() {
                             },
                             }}
                         >
-                            <ArrowForwardIcon className="arrow" fontSize="13px" sx={{ transition: 'transform 0.3s ease' }} />
+                            <ArrowForwardIcon className="arrow" fontSize="16px" sx={{ transition: 'transform 0.3s ease' }} />
                             <Typography
                             sx={{
                                 fontWeight: 100,
-                                fontSize: '11px',
+                                fontSize: '14px',
                                 textTransform: 'uppercase',
                             }}
                             >

@@ -26,7 +26,7 @@ export default function Equipo() {
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        backgroundImage: 'url(/assets/renders/re02.png)',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re02_ocsbvr.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
                         mt: 15,
@@ -44,14 +44,12 @@ export default function Equipo() {
                 sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    // border: '1px solid yellow',
                     py: 5,
                     px: 4,
                 }}
             >
                 <Box sx={{
                     mb: 5,
-                    // border: '1px solid red',
                     height: '500px'
                 }}>
                     {/* left  */}
@@ -65,7 +63,7 @@ export default function Equipo() {
                         Ingenieria y Arquitectura
                     </Typography>
 
-                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'12px', mb: 2, width: '80%' }}>
+                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'14px', mb: 2, width: '80%' }}>
                         Somos un equipo de profesionales apasionados por la arquitectura y el diseño. 
                         Nuestro objetivo es crear espacios únicos y funcionales que se adapten a las necesidades de nuestros clientes.
                         Con años de experiencia en el sector, hemos trabajado en una amplia variedad de proyectos, desde residenciales hasta comerciales.
@@ -110,7 +108,6 @@ export default function Equipo() {
                 sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    // border: '1px solid yellow',
                     py: 5,
                     backgroundColor: '#fff',
                     color: '#000',
@@ -120,7 +117,7 @@ export default function Equipo() {
             >
                 <Box>
                     {/* left  */}
-                    <Image src="/assets/headshots/YN01.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 20%', borderRadius: 2}}></Image>
+                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/YN01_ytnhbv.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 20%', borderRadius: 2}}></Image>
                 </Box>
 
 
@@ -131,14 +128,14 @@ export default function Equipo() {
                     pl: 10,
                 }}>
                     {/* left  */}
-                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'16px', mb: 1, mt: 15 }}>
+                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: 15 }}>
                         Yennifer Lantigua
                     </Typography>
-                    <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'12px', mb: 3 }}>
+                    <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'16px', mb: 3 }}>
                         Arquitecta
                     </Typography>
 
-                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'12px', mb: 2, width: '80%' }}>
+                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'14px', mb: 2, width: '80%' }}>
                         Yennifer Lantigua es una arquitecta con más de 5 años de experiencia en el diseño y la planificación de proyectos arquitectónicos.
                         Su enfoque se centra en la creación de espacios funcionales y estéticamente agradables, adaptados a las necesidades de sus clientes.
                         Yennifer ha trabajado en una variedad de proyectos, desde residenciales hasta comerciales, y se destaca por su atención al detalle y su capacidad para resolver problemas complejos.
@@ -184,19 +181,18 @@ export default function Equipo() {
 
                 <Box sx={{
                     mb: 5,
-                    // border: '1px solid red',
                     height: '500px',
                     pl: 10,
                 }}>
                     {/* left  */}
-                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'16px', mb: 1, mt: 15 }}>
+                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: 15 }}>
                         Kelmyn Victoria
                     </Typography>
-                    <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'12px', mb: 3 }}>
+                    <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'16px', mb: 3 }}>
                         Ingeniero Civil
                     </Typography>
 
-                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'12px', mb: 2, width: '80%' }}>
+                    <Typography variant="body1" sx={{fontWeight: '300', fontSize:'14px', mb: 2, width: '80%' }}>
                         Kelmyn Victoria es un ingeniero civil con más de 5 años de experiencia en la gestión y ejecución de proyectos de construcción.
                         Su enfoque se centra en la planificación y supervisión de obras, asegurando que cada proyecto se complete dentro del plazo y el presupuesto establecidos.
                         Kelmyn ha trabajado en una variedad de proyectos, desde infraestructuras hasta edificaciones, y se destaca por su capacidad para coordinar equipos multidisciplinarios y resolver problemas técnicos.
@@ -231,7 +227,7 @@ export default function Equipo() {
                     }}
                 >
                     {/* right */}
-                    <Image src="/assets/headshots/KM02.jpg" width={453} height={500} alt="Kelmyn Victoria Headshot" style={{objectFit: 'cover', objectPosition:'100% 10%', borderRadius: 2}}></Image>
+                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/KM02_epkd3s.jpg" width={453} height={500} alt="Kelmyn Victoria Headshot" style={{objectFit: 'cover', objectPosition:'100% 10%', borderRadius: 2}}></Image>
                 </Box>
 
             </Box>

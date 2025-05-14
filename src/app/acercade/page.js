@@ -28,6 +28,7 @@ export default function Acercade() {
                     display: 'flex',
                     flexDirection: 'column',
                     textAlign: 'center',
+                    flex: 1
                 }}>
                 <Typography variant="h1" sx={{fontSize: '1.2rem', fontWeight: "bold", textAlign: "left", textTransform: "uppercase" }}>
                     Acerca de
@@ -215,12 +216,14 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
         <Box
             sx={{
                 display: 'flex',
+                flex: 2,
                 flexDirection: 'column',
                 width: '800px',
                 justifyContent: 'space-between',
                 alignItems: 'flex-end',
                 gap: 4,
                 height: '4500px',
+                overflowX: 'hidden',
                 overflowY: 'scroll',
                 '&::-webkit-scrollbar': {
                     display: 'none',
@@ -242,31 +245,31 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/01_vrpf4h.png"
                 alt="Altus Residence"
-                width={800}
-                height={700}
+                width={1200}
+                height={800}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238346/extn01_tzdvqr.png"
                 alt="Altus Residence"
-                width={750}
-                height={700}
+                width={1350}
+                height={900}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238339/ext04_ub4fcq.png"
                 alt="Altus Residence"
-                width={800}
-                height={600}
+                width={1020}
+                height={900}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237981/13_v5addg.png"
                 alt="Altus Residence"
-                width={700}
+                width={900}
                 height={700}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
@@ -274,23 +277,23 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238338/ext06_l0exij.png"
                 alt="Altus Residence"
-                width={500}
-                height={600}
+                width={800}
+                height={1200}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084237/C04_dfhugn.png"
                 alt="Altus Residence"
-                width={800}
-                height={600}
+                width={1200}
+                height={920}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237973/03_jz69il.png"
                 alt="Altus Residence"
-                width={725}
+                width={1300}
                 height={700}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
@@ -298,32 +301,32 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084162/A01_vsqhw4.png"
                 alt="Altus Residence"
-                width={600}
-                height={700}
+                width={1140}
+                height={800}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A03_frsku5.png"
                 alt="Altus Residence"
-                width={800}
-                height={600}
+                width={1245}
+                height={920}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
-                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238806/re09_mhnyin.pngg"
+                src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238345/ext10_zepo4f.png"
                 alt="Altus Residence"
-                width={600}
-                height={500}
+                width={1000}
+                height={1130}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />
             <Image
                 src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re02_ocsbvr.png"
                 alt="Altus Residence"
-                width={800}
-                height={700}
+                width={1300}
+                height={990}
                 objectFit="contain"
                 style={{ borderRadius: '2px' }}
             />

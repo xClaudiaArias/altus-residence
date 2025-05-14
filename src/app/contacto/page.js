@@ -10,7 +10,7 @@ export default function Contacto() {
             sx={{
                 width: '100%',
                 height: '100vh',
-                backgroundImage: 'url(/assets/exteriores/ext02.png)',
+                backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238341/ext02_d9hazf.png)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center', 
