@@ -13,7 +13,7 @@ export default function Inicio() {
       <Box 
         sx={{
           width: '100%',
-          height: '100vh',
+          height: {xs: "800px", md: '100vh'},
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center', 
@@ -65,7 +65,7 @@ export default function Inicio() {
                 width: {sx: '100%', md: "700px"},
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                 textAlign: { xs: 'center', md: 'right' },
-                mt: {xs: 25, md: 2},
+                mt: {xs: 34, md: 2},
                 mb: 2,
                 px: { xs: 4, md: 0 },
               }}
@@ -121,143 +121,214 @@ export default function Inicio() {
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'center',
           alignItems: 'center',
           height: '100vh',
-          px: 4
+          px: { xs: 2, md: 4 },
+          py: { xs: 4, md: 0 },
         }}
       >
-
-          {/* my image  */}
-          <Box sx={{
+        {/* Image section */}
+        <Box
+          sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: 2,  
-            width: '70%'   
-          }}>
-            <Box
-            component={'img'}
+            gap: 2,
+            width: { xs: '100%', md: '60%' },
+          }}
+        >
+          <Box
+            component="img"
             src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239025/bird-view_x11m1t.png"
-            alt="Logo"
+            alt="Vista aérea de Altus"
             sx={{
               width: '100%',
-              height: '600px',
-              borderRadius: 1,
-            }}/>
-            <Typography variant="body1" sx={{ width: '100%', mb: 2, fontSize: '12px', textAlign: 'center', fontWeight: 300 }}>
-              Cerros de Gurabo, Santiago de Los Caballeros, Republica Dominicana.
-            </Typography>
-          </Box>
-        {/* right side  */}
-        <Box sx={{ width: '50%', pl: 8 }}>
-          <Typography variant="h6" sx={{ mb: 2, textTransform: 'uppercase', fontSize: '18px', fontWeight: 700 }}>
+              height: { xs: '300px', md: '600px' },
+              borderRadius: { md: 1 },
+              objectFit: 'cover',
+            }}
+          />
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: '12px',
+              textAlign: 'center',
+              fontWeight: 300,
+              color: '#fff',
+              display: { xs: 'none', sm: 'block' },
+            }}
+          >
+            Cerros de Gurabo, Santiago de Los Caballeros, República Dominicana.
+          </Typography>
+        </Box>
+
+        {/* Text section */}
+        <Box
+          sx={{
+            width: { xs: '100%', md: '40%' },
+            pl: { md: 8 },
+            mt: { xs: 4, md: 0 },
+            textAlign: { xs: 'center', md: 'left' },
+          }}
+        >
+          <Typography
+            variant="h6"
+            sx={{
+              mb: 2,
+              textTransform: 'uppercase',
+              fontSize: '18px',
+              fontWeight: 700,
+            }}
+          >
             Altus Residence
           </Typography>
-          <Typography variant="body1" sx={{ mb: 2, fontSize: '16px', fontWeight: 200 }}>
-            Elevando la vida a nuevas <strong>altu</strong>ra<strong>s</strong>
-            <br></br>
-            donde la exclusividad y el lujo se encuentran en perfecta armonía.
-          </Typography>
-          <Link href="/galeria">
-            <Button variant="contained" 
+          <Typography
+            variant="body1"
             sx={{
-                mt: 2, 
-                backgroundColor: '#000', 
-                color: '#fff', 
-                fontSize: '16px', 
+              mb: 2,
+              fontSize: '16px',
+              fontWeight: 200,
+            }}
+          >
+            Elevando la vida a nuevas <strong>altu</strong>ra<strong>s</strong>, donde la exclusividad y el lujo se encuentran en perfecta armonía.
+          </Typography>
+
+          <Link href="/galeria" passHref>
+            <Button
+              variant="contained"
+              sx={{
+                mt: 2,
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: {xs: '12px', md: '16px'},
                 fontWeight: 700,
                 '&:hover': {
                   backgroundColor: '#333',
-                  cursor: 'pointer',
-                  color: '#fff',
                 },
-                
-              }}>
-              Ver Galeria
+              }}
+            >
+              Ver Galería
             </Button>
           </Link>
         </Box>
-
       </Box>
+
 
       {/* third section  */}
 
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column-reverse', md: 'row' },
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: {xs: "750px", md: '100vh'},
           px: 2,
+          py: { xs: 4, md: 0 },
           backgroundColor: '#000',
-          color: "white"
+          color: 'white',
+          gap: 4,
         }}
       >
-        {/* left side  */}
-        <Box sx={{ width: '50%', pl: 4, display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
-          <Image
-            src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png"
-            alt="Logo"
-            width={400}
-            height={200}
-            style={{
-              borderRadius: 1,
-              objectFit: 'contain',
-              objectPosition: 'center',
-              padding: 0,
-            }}
-          />
-
-          <Typography variant="body1" sx={{ mb: 2, fontSize: '16px', fontWeight: 400, color: '#fff', textAlign: 'center' }}>
-            Nuestra misión es crear espacios que inpiren, que conecten el presente pero sobre todo que miren con firmeza hacia el futuro.
-          </Typography>
-          <Link href="/equipo">
-            <Button variant="contained" 
+        {/* Left side */}
+        <Box
+          sx={{
+            width: { xs: '100%', md: '50%' },
+            pl: { md: 4 },
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+          }}
+        > 
+          <Box
             sx={{
-                mt: 2, 
-                backgroundColor: '#fff', 
-                color: '#000', 
-                fontSize: '16px', 
+              width: '300px',
+              height: '150px',
+              background: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png)',
+              backgroundPosition: 'center',
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: {xs: 'none', md: 'block'}
+            }}
+          >
+          </Box>
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: '12px',
+              fontWeight: 400,
+              color: '#fff',
+              px: {xs: 2}
+            }}
+          >
+            Nuestra misión es crear espacios que inspiren, que conecten el presente pero sobre todo que miren con firmeza hacia el futuro.
+          </Typography>
+
+          <Link href="/equipo" passHref>
+            <Button
+              variant="contained"
+              sx={{
+                mt: 2,
+                backgroundColor: '#fff',
+                color: '#000',
+                fontSize: {xs: '12px', md: '16px'},
                 fontWeight: 700,
                 '&:hover': {
                   backgroundColor: '#e0e0e0',
-                  cursor: 'pointer',
-                  color: '#000',
                 },
-                
-              }}>
+              }}
+            >
               Conoce al equipo
             </Button>
           </Link>
         </Box>
 
-        {/* right side  */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: 2,  
-          width: '70%'   
-        }}>
+        {/* Right side */}
+        <Box
+          sx={{
+            width: { xs: '100%', md: '50%' },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 2,
+          }}
+        >
           <Box
-            component={'img'}
+            component="img"
             src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249331/02_yervjy.jpg"
-            alt="Logo"
+            alt="Equipo Altus"
             sx={{
-              width: '600px',
-              height: '800px',
-              borderRadius: 1, 
+              width: { xs: '100%', sm: '80%', md: '600px' },
+              height: { xs: '500px', md: '800px' },
+              borderRadius: 1,
               objectFit: 'cover',
-              objectPosition: 'center',
-              mt: 4
-          }}/>
-          <Typography variant="body1" sx={{ width: '75%', mb: 2, fontSize: '14px', textAlign: 'center', fontWeight: 300 }}>
-            <em>Con Altus, estamos escribiendo un nuevo capitulo para la ciudad de Santiago</em>
+              objectPosition: {xs: 'top', md: 'center'},
+            }}
+          />
+
+          <Typography
+            variant="body1"
+            sx={{
+              display: {xs: 'none'},
+              width: { xs: '90%', md: '75%' },
+              mb: 2,
+              fontSize: '14px',
+              textAlign: 'center',
+              fontWeight: 300,
+              color: '#ccc',
+            }}
+          >
+            <em>Con Altus, estamos escribiendo un nuevo capítulo para la ciudad de Santiago.</em>
           </Typography>
         </Box>
-
       </Box>
+
     </Box>
   );
 }
