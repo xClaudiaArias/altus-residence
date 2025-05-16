@@ -19,8 +19,8 @@ export default function Inicio() {
           justifyContent: 'center', 
           alignItems: 'flex-end',
           backgroundColor: '#f0f0f0',
-          backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239186/Artboard1_yskeso.png)',
-          backgroundSize: '100% 100%',
+          backgroundImage: {xs: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747427581/hero-mobile_cbcl7l.png)', md: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239186/Artboard1_yskeso.png)'},
+          backgroundSize: {xs: 'cover', md: '100% 100%'},
           backgroundPosition: 'center', 
           color: 'white',
           textAlign: 'center',
@@ -36,7 +36,7 @@ export default function Inicio() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'flex-end',
+            alignItems: {sx: 'center', md: 'flex-end'},
             gap: 2,
             width: '100%',
             height: '100%',
@@ -44,32 +44,35 @@ export default function Inicio() {
             position: 'absolute',
             top: 100, 
             left: 0,
-            pr: 4,
+            pr: {xs: 0, md:4},
           }}>
 
-          <Divider
-            sx={{
-              backgroundColor: '#fff',
-              height: '1px',
-              width: '60px',
-              mt: 50
-            }}
-          />
-          <Typography sx={{
-            fontSize: '1em',
-            fontFamily: 'Inter, san-serif', 
-            color: '#fff',
-            fontWeight: 100,
-            // textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-            textAlign: 'right',
-            mt: 2,
-          }}>
-            ALTUS simboliza la grandeza y la elevacion, reflejando perfectamente
-            <br/>
-            la posicion de su ubicación and Los Cerros de Gurabo, donde se
-            <br/>
-            redefine la vida exclusiva y prestigiosa.
-        </Typography>
+            <Divider
+              sx={{
+                display: {xs: 'none', md: 'block'},
+                backgroundColor: '#fff',
+                height: '1px',
+                width: '60px',
+                mt: {xs: 20, md: 50}
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: '1em',
+                fontFamily: 'Inter, sans-serif',
+                color: '#fff',
+                fontWeight: 200,
+                width: {sx: '100%', md: "700px"},
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                textAlign: { xs: 'center', md: 'right' },
+                mt: {xs: 25, md: 2},
+                mb: 2,
+                px: { xs: 4, md: 0 },
+              }}
+            >
+              ALTUS simboliza la grandeza y la elevación, reflejando perfectamente la posición de su ubicación en Los Cerros de Gurabo, donde se redefine la vida exclusiva y prestigiosa.
+            </Typography>
+
 
         {/* logos  */}
         <Box
@@ -85,13 +88,13 @@ export default function Inicio() {
             src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/altus-logo_qpsbia.png"
             alt="Logo"
             sx={{
-              width: '200px',
-              height: '100px',
+              width: {xs: '150px', md:'200px'},
+              height: {xs: '50px', md: '100px'},
               mixBlendMode: 'exclusion',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               // border: '1px solid red',
-              mt: 2,
+              mt: {xs: 1, md: 2},
             }}
           />
           <Box
@@ -99,8 +102,8 @@ export default function Inicio() {
             src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747248650/vict-logo_soadbi.png"
             alt="Logo"
             sx={{
-              width: '150px',
-              height: '100px',
+              width: {xs: '100px', md: '150px'},
+              height: {xs: '50px', md: '100px'},
               mixBlendMode: 'exclusion',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
