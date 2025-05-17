@@ -14,13 +14,16 @@ export default function Footer () {
                 color: 'white',
                 display: 'flex',
                 flexDirection: 'column',
-                padding: 6
+                padding: 6,
+                height: {xs: '500px', md: 'auto'}
             }}
         >
             {/* top  */}
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: {xs: 'column', md: 'row'},
+                    gap: {xs: 2, md: 0},
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     mb: 8
@@ -31,7 +34,7 @@ export default function Footer () {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 10
+                        gap: 10,
                     }}
                 >
                     <Image
@@ -76,15 +79,17 @@ export default function Footer () {
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: {xs: 'column', md: 'row'},
+                    textAlign: {xs: 'center', md: 'left'},
                     justifyContent: 'space-between',
-                    height: '120px'
+                    height: '120px',
                 }}
             >
                 <Box
                     sx={{
                         flex: 1,
                         display: 'flex',
-                        flexDirection: 'column'
+                        flexDirection: 'column',
                     }}
                 >
                     <Link href="/acercade">
@@ -116,7 +121,10 @@ export default function Footer () {
                         sx={{
                             mt: 2,
                             display: 'flex',
-                            gap: 3
+                            justifyContent: {xs: 'center', md: 'flex-start'},
+                            gap: {xs: 5, md: 3},
+                            padding: {xs: '5px 0', md: 0},
+                            mb: {xs: 5, md: 0},
                         }}
                     >
                         <Link href="/acercade" style={{color: 'white', cursor: 'pointer'}}><FacebookIcon/></Link>
@@ -129,31 +137,67 @@ export default function Footer () {
                     sx={{
                         flex: 2,
                         display: 'flex',
-                        justifyContent: 'space-between'
+                        flexDirection: {xs: 'column', md: 'row'},
+                        textAlign: {xs: 'center', md: 'left'},
+                        gap: {xs: 1, md:0},
                     }}
                 >
                     <Typography
                         sx={{
-                            fontSize: '12px',
+                            fontSize: {xs: '12px', md: '16px'},
                             fontWeight: '100',
-                            width: '140px',
+                            width: {xs: '100%', md: '500px'},
                             px: 2,
-                            flex: 1
+                            flex: 2,
+                            pl: {xs: 0}
                         }}
-                    >Subscirbete a nuestro boletin informativo</Typography>
-                    <TextField className="filled-basic" variant="filled" 
+                    >
+                        Subscirbete a nuestro boletin informativo
+                    </Typography>
+
+                    {/* input  */}
+                    <TextField
+                    variant="outlined"
+                    // fullWidth
                     sx={{
+                        mx: 2,
+                        width: {xs: '100%', md: '60%'},
                         backgroundColor: 'rgb(39, 39, 39)',
                         height: '25px',
+                        '& .MuiOutlinedInput-root': {
+                        backgroundColor: 'rgb(39, 39, 39)',
+                        borderRadius: 1,
+                        // height: '25px',
+                        paddingX: 1,
                         color: '#fff',
-                        flex: 2
-                    }}/>
+                        },
+                        '& .MuiInputBase-input': {
+                        color: 'none',
+                        height: '25px',
+                        padding: '10px', // Adjust as needed
+                        },
+                        '& .MuiInputLabel-root': {
+                        color: '#aaa',
+                        },
+                        '&.Mui-focused': {
+                            boxShadow: 'none',
+                            outline: 'none',
+                        },
+                    }}
+                    />
+
+
+
+                    {/* button  */}
                     <Box
                         sx={{
                             flex: 1,
                             display: 'flex',
                             alignItems: 'start',
-                            justifyContent: 'center'
+                            justifyContent: {xs: 'center', md: 'flex-end'},
+                            px: 0,
+                            mt: {xs: 4, md: 0}
+                            
                         }}
                     >
                         <Button
