@@ -9,7 +9,7 @@ export default function Equipo() {
     return (
         <Box 
             sx={{
-                padding: 2,
+                padding: {xs: 0, md:2},
                 margin: 0,
                 display: 'flex',
                 flexDirection: 'column',
@@ -17,7 +17,7 @@ export default function Equipo() {
                 color: '#fff',
             }}
         >
-            <Box sx={{px: 4, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Box sx={{px: {xs: 2, md:4}, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Box
                     sx={{
                         width: '100%',
@@ -29,7 +29,7 @@ export default function Equipo() {
                         backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238800/re02_ocsbvr.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
-                        mt: 15,
+                        mt: {xs: 10, md: 15},
                         borderRadius: 1,
                         boxShadow: 2, 
                     }}
@@ -44,19 +44,21 @@ export default function Equipo() {
                 sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    py: 5,
-                    px: 4,
+                    flexDirection: {xs: 'column', md: 'row'},
+                    py: {xs: 0, md:5},
+                    px: {xs: 2, md: 4},
                 }}
             >
                 <Box sx={{
+                    mt: {xs: 2, md: 0},
                     mb: 5,
                     height: '500px'
                 }}>
                     {/* left  */}
-                    <Typography variant="h1" sx={{fontWeight: '700', fontSize: '1.2rem', fontWeight: 'bold', mb: 2, textTransform: 'uppercase', textAlign: 'left' }}>
+                    <Typography variant="h1" sx={{fontWeight: '700', fontSize: '1.2rem', fontWeight: 'bold', mb: {xs: 0, md: 2}, textTransform: 'uppercase', textAlign: 'left' }}>
                         Conoce a nuestro equipo
                     </Typography>
-                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'16px', mb: 1, mt: 15 }}>
+                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'16px', mb: 1, mt: {xs: 2, md: 15} }}>
                         VICTLAN
                     </Typography>
                     <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'12px', mb: 3 }}>
@@ -79,6 +81,7 @@ export default function Equipo() {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         mt: 2,
+                        gap: 2
                     }}>
                         <Link href="#">
                             <Typography variant="h5" sx={{ mb: 2 }}>
@@ -99,7 +102,19 @@ export default function Equipo() {
                 </Box>
                 <Box>
                     {/* right  */}
-                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249331/01_cjvz3e.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 80%', borderRadius: 2}}></Image>
+                    <Box
+                        sx={{
+                            backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249331/01_cjvz3e.jpg)',
+                            width: {xs: '360px', md:'453px'},
+                            height: {xs: '400px', md:'500px'},
+                            backgroundSize: 'cover',
+                            backgroundPosition: {xs: '100% 80%', md: "100% 80%"},
+                            borderRadius: 2,
+                            mb: {xs: '20px', md: 0}
+                        }}
+                    >
+
+                    </Box>
                 </Box>
             </Box>
 
@@ -107,28 +122,43 @@ export default function Equipo() {
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: {xs: 'column', md: 'row'},
                     justifyContent: 'space-between',
-                    py: 5,
+                    py: {xs: 0, md: 5},
                     backgroundColor: '#fff',
                     color: '#000',
                     width: '100vw',
-                    px: 4,
+                    px: {xs: 2, md:4}
                 }}
             >
-                <Box>
+                <Box
+                    sx={{
+                        padding: {xs: '20px 0', md: '0'}
+                    }}
+                >
                     {/* left  */}
-                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/YN01_ytnhbv.jpg" width={453} height={500} alt="Equipo Victlan" style={{objectFit: 'cover', objectPosition:'100% 20%', borderRadius: 2}}></Image>
+                    <Box
+                        sx={{
+                            backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/YN01_ytnhbv.jpg)',
+                            width: {xs: '360px', md:'453px'},
+                            height: {xs: '400px', md:'500px'},
+                            backgroundSize: 'cover',
+                            backgroundPosition: {xs: 'center', md: "100% 80%"},
+                            borderRadius: 2
+                        }}
+                    >
+
+                    </Box>
                 </Box>
 
 
                 <Box sx={{
-                    mb: 5,
-                    // border: '1px solid red',
+                    mb: {xs: 0, md: 5},
                     height: '500px',
-                    pl: 10,
+                    pl: {xs: 0, md: 10},
                 }}>
                     {/* left  */}
-                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: 15 }}>
+                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: {xs: 2, md: 15} }}>
                         Yennifer Lantigua
                     </Typography>
                     <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'16px', mb: 3 }}>
@@ -150,6 +180,7 @@ export default function Equipo() {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         mt: 2,
+                        gap: 2
                     }}>
                         <Link href="#">
                             <Typography variant="h5" sx={{ mb: 2 }}>
@@ -171,10 +202,11 @@ export default function Equipo() {
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: {xs: 'column-reverse', md: 'row'},
                     justifyContent: 'space-between',
-                    py: 5,
+                    py: {xs: 0, md: 5},
                     width: '100vw',
-                    px: 4,
+                    px: {xs: 2, md: 4},
                 }}
             >
 
@@ -182,10 +214,10 @@ export default function Equipo() {
                 <Box sx={{
                     mb: 5,
                     height: '500px',
-                    pl: 10,
+                    pl: {xs: 0, md: 10},
                 }}>
                     {/* left  */}
-                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: 15 }}>
+                    <Typography variant="h2" sx={{fontWeight: '700', textTransform: 'uppercase', fontSize:'18px', mb: 1, mt: {xs: 5, md: 15} }}>
                         Kelmyn Victoria
                     </Typography>
                     <Typography variant="h3" sx={{fontWeight: '600', textTransform: 'uppercase', fontSize:'16px', mb: 3 }}>
@@ -207,6 +239,7 @@ export default function Equipo() {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         mt: 2,
+                        gap: 2
                     }}>
                         <Link href="#">
                             <Typography variant="h5" sx={{ mb: 2 }}>
@@ -223,11 +256,23 @@ export default function Equipo() {
 
                 <Box
                     sx={{
-                        pr:4
+                        pr: {xs: 0, md: 4},
+                        mt: {xs: 5, md: 0}
                     }}
                 >
                     {/* right */}
-                    <Image src="https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/KM02_epkd3s.jpg" width={453} height={500} alt="Kelmyn Victoria Headshot" style={{objectFit: 'cover', objectPosition:'100% 10%', borderRadius: 2}}></Image>
+                    <Box
+                        sx={{
+                            backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747249332/KM02_epkd3s.jpg)',
+                            width: {xs: '360px', md:'453px'},
+                            height: {xs: '400px', md:'500px'},
+                            backgroundSize: 'cover',
+                            backgroundPosition: {xs: 'top', md: "100% 80%"},
+                            borderRadius: 2
+                        }}
+                    >
+
+                    </Box>
                 </Box>
 
             </Box>
