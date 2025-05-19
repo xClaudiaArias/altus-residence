@@ -16,14 +16,14 @@ export default function Contacto() {
                 justifyContent: 'center', 
                 alignItems: 'center',
                 backgroundColor: '#f0f0f0',
-                backgroundSize: '100% 100%',
+                backgroundSize: {xs: 'cover', md:'100% 100%'},
                 backgroundPosition: 'center',
                 padding: 0,
                 margin: 0,
             }}
         >
 
-            <Box sx={{ padding: 4, backgroundColor: 'white',  width: '40%', height: '400px' }}>
+            <Box sx={{ padding: {xs: 2, md: 4}, backgroundColor: 'white',  width: {xs: '90%', md: '40%'}, height: '400px' }}>
                 {/* <Box>
                     <Typography variant="h1" sx={{fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mb: 2 }}>
                         Contáctanos
