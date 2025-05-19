@@ -10,8 +10,8 @@ export default function Acercade() {
             display: 'flex',
             justifyContent: 'space-between',
             width: '100vw',
-            pl: 3,
-            mt: 14
+            pl: {xs: 0, md: 3},
+            mt: {xs: 10, md: 14},
         }}>
 
         {/* written  */}
@@ -20,9 +20,22 @@ export default function Acercade() {
                 display: 'flex',
                 flexDirection: 'column',
                 width: '400px',
-                px: 2,
+                px: {xs: 3, md: 2}
             }}
         >
+            <Box
+                sx={{
+                    width: '340px',
+                    height: '300px',
+                    backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238807/re10_rfqu7a.png)',
+                    display: {xs: 'block', md: 'none'},
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    mb: 2
+                }}
+            >
+
+            </Box>
             <Box 
                 sx={{
                     display: 'flex',
@@ -52,6 +65,22 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                     Nuestra misión es ofrecer un hogar moderno y cómodo a nuestros residentes, brindando un estilo de vida de calidad en un entorno seguro y agradable.
                 </Typography>
             </Box>
+
+
+            {/* ---- */}
+            <Box
+                sx={{
+                    width: '340px',
+                    height: '300px',
+                    backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238572/PA-niveles_htrqaa.png)',
+                    display: {xs: 'block', md: 'none'},
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    mb: 2
+                }}
+            ></Box>
+
+            {/* ---- */}
 
             <Box 
                 sx={{
@@ -92,6 +121,22 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                     Tipo A - 235 m2
                 </Typography>
 
+                {/* ---- */}
+                <Box
+                    sx={{
+                        width: '340px',
+                        height: '300px',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084166/A05_osshtc.png)',
+                        display: {xs: 'block', md: 'none'},
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        mb: 2,
+                        mt: 2
+                    }}
+                ></Box>
+
+            {/* ---- */}
+
                 <List sx={{ listStyleType: 'disc', pl: 4, mt: 2}}>
                     <ListItem sx={{ display: 'list-item' }}>Recibidor</ListItem>
                     <ListItem sx={{ display: 'list-item' }}>3 habitaciones con baño.</ListItem>
@@ -115,6 +160,22 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                     Tipo B - 185 m2
                 </Typography>
 
+                                {/* ---- */}
+                <Box
+                    sx={{
+                        width: '340px',
+                        height: '300px',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084216/B04_ihr2hc.png)',
+                        display: {xs: 'block', md: 'none'},
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        mb: 2,
+                        mt: 2
+                    }}
+                ></Box>
+
+            {/* ---- */}
+
                 <List sx={{ listStyleType: 'disc', pl: 4, mt: 2 }}>
                     <ListItem sx={{ display: 'list-item' }}>3 habitaciones con baño</ListItem>
                     <ListItem sx={{ display: 'list-item' }}>4 baños y medio</ListItem>
@@ -133,6 +194,22 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 <Typography variant="h3" sx={{fontSize: '14px',  fontWeight: "bold", textAlign: "left", mt:3}}>
                     Tipo C - 114 m2
                 </Typography>
+
+                {/* ---- */}
+                <Box
+                    sx={{
+                        width: '340px',
+                        height: '300px',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747084237/C04_dfhugn.png)',
+                        display: {xs: 'block', md: 'none'},
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        mb: 2,
+                        mt: 2
+                    }}
+                ></Box>
+
+                {/* ---- */}
 
                 <List sx={{ listStyleType: 'disc', pl: 4, mt: 2 }}>
                     <ListItem sx={{ display: 'list-item' }}>2 habitaciones con baño</ListItem>
@@ -176,6 +253,23 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                 <Typography sx={{ textAlign: "left", mt: 3 }}>
                 Uno de los mayores atractivos de Altus Residence es su impresionante área social de más de 500 m2, distribuidos en los niveles 1, 6 y 13 respectivamente.
                 </Typography>
+
+                                {/* ---- */}
+                <Box
+                    sx={{
+                        width: '340px',
+                        height: '300px',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747237981/13_v5addg.png)',
+                        display: {xs: 'block', md: 'none'},
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        mb: 2,
+                        mt: 2
+                    }}
+                ></Box>
+
+                {/* ---- */}
+
                 <List sx={{ listStyleType: 'disc', pl: 4, mt: 3 }}>
                     <ListItem sx={{ display: 'list-item' }}>Lobby de doble altura climatizado</ListItem>
                     <ListItem sx={{ display: 'list-item' }}>Co-working space</ListItem>
@@ -202,6 +296,22 @@ Altus Residence se erige como una opción inigualable para quienes buscan un ho
                     <ListItem sx={{ display: 'list-item' }}><strong>Inicial:</strong> 30% durante el proceso de construcción.</ListItem>
                     <ListItem sx={{ display: 'list-item' }}><strong>Entrega:</strong> 60% con el banco de su preferencia en 2027.</ListItem>
                 </List>
+
+                                                {/* ---- */}
+                <Box
+                    sx={{
+                        width: '340px',
+                        height: '300px',
+                        backgroundImage: 'url(https://res.cloudinary.com/dbchxgv2n/image/upload/v1747238345/ext07_aepgzj.png)',
+                        display: {xs: 'block', md: 'none'},
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        mb: 2,
+                        mt: 2
+                    }}
+                ></Box>
+
+                {/* ---- */}
 
 
 
