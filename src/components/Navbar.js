@@ -79,7 +79,7 @@ export default function Navbar() {
                     edge="end"
                     color="inherit"
                     aria-label="menu"
-                    sx={{ display: { xs: "flex", md: "none" } }}
+                    sx={{ display: { xs: "flex", md: "none", color: isAcerca ? '#000' : '#fff' } }}
                     onClick={toggleDrawer(true)}
                 >
                     <MenuIcon />
