@@ -40,16 +40,42 @@ export default function Navbar() {
         { label: "Contacto", path: "/contacto" },
     ];
 
+    const [scrolled, setScrolled] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            setScrolled(offset > 5); 
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const getFontColor = () => {
+        if (isAcerca) {
+            return scrolled ? '#fff' : '#000'; 
+        }
+        return '#fff'; // default on other pages
+    };
+
+
+
     return (
         <>
-        <AppBar position="fixed" sx={{ backgroundColor: "transparent", boxShadow: "none", py: 2, px: 2 }}>
+        <AppBar position="fixed" sx={{
+            backgroundColor: scrolled ? 'rgba(0, 0, 0, 0.7)' : 'transparent',
+            transition: 'background-color 0.3s ease',
+            boxShadow: "none", 
+            py: 2, 
+            px: 2 }}>
             <Toolbar>
                 <Typography
                     variant="h6"
                     component="div"
                     sx={{ flexGrow: 1, fontWeight: "bold" }}
                 >
-                    <Link href="/" style={{ color: isAcerca ? '#000' : '#fff', textDecoration: "none", letterSpacing: 2 }}>
+                    <Link href="/" style={{ color: getFontColor(), textDecoration: "none", letterSpacing: 2 }}>
                     ALTUS
                     </Link>
                 </Typography>
@@ -62,7 +88,7 @@ export default function Navbar() {
                         href={path}
                         style={{
                             textDecoration: 'none',
-                            color: isAcerca ? '#000' : '#fff',
+                            color: getFontColor(),
                             fontWeight: pathname === path ? 'bold' : 'normal',
                             letterSpacing: 2,
                         }}
