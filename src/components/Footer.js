@@ -152,7 +152,7 @@ export default function Footer () {
                             pl: {xs: 0}
                         }}
                     >
-                        Subscirbete a nuestro boletin informativo
+                        Subscribete a nuestro boletin informativo
                     </Typography>
 
                     {/* input  */}

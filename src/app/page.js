@@ -260,7 +260,7 @@ export default function Inicio() {
           <Typography
             variant="body1"
             sx={{
-              fontSize: '12px',
+              fontSize: '16px',
               fontWeight: 400,
               color: '#fff',
               px: {xs: 2}
