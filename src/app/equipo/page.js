@@ -143,7 +143,7 @@ export default function Equipo() {
                             width: {xs: '360px', md:'453px'},
                             height: {xs: '400px', md:'500px'},
                             backgroundSize: 'cover',
-                            backgroundPosition: {xs: 'center', md: "100% 80%"},
+                            backgroundPosition: {xs: 'center', md: "top"},
                             borderRadius: 2
                         }}
                     >
@@ -267,7 +267,7 @@ export default function Equipo() {
                             width: {xs: '360px', md:'453px'},
                             height: {xs: '400px', md:'500px'},
                             backgroundSize: 'cover',
-                            backgroundPosition: {xs: 'top', md: "100% 80%"},
+                            backgroundPosition: {xs: 'top', md: "top"},
                             borderRadius: 2
                         }}
                     >
