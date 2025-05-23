@@ -128,6 +128,7 @@ export default function Galeria() {
             {hoveredItem && (
                 <Box
                     sx={{
+                    display: {xs: 'none', md: 'block'},
                     position: 'absolute',
                     top: '70%',
                     left: '5%',
@@ -189,6 +190,7 @@ export default function Galeria() {
                     <IconButton
                         onClick={scrollUp}
                         sx={{
+                        display: {xs: 'none', md: 'block'},
                         position: 'absolute',
                         bottom: 0,
                         right: 0,
@@ -385,6 +387,7 @@ export default function Galeria() {
                 {/* Scroll Button */}
                 <IconButton onClick={scrollDown} 
                     sx={{
+                        display: {xs: 'none', md: 'block'},
                         fontSize: '13px',
                         color: 'white', 
                         mt: 2,
