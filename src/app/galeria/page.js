@@ -50,8 +50,8 @@ export default function Galeria() {
                 },
                 {
                     label: 'Áreas Comunes',
-                    href: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239019/areas-hero_k7bnui.png',
-                    image: '/assets/images/areas-hero.png',
+                    href: '/galeria/areas-comunes',
+                    image: 'https://res.cloudinary.com/dbchxgv2n/image/upload/v1747239019/areas-hero_k7bnui.png',
                     title: 'Áreas Comunes',
                     description: 'Ambientes interiores que combinan confort y diseño.'
                 }
