@@ -153,7 +153,7 @@ const images = [
                 key={idx}
                 sx={{
                     flex: '0 0 100%',
-                    height: '100%',
+                    height: {xs: '100vh', md: '100%'},
                     position: 'relative',
                     backgroundColor: "#fff",
                     scrollSnapAlign: 'start',
@@ -166,7 +166,7 @@ const images = [
                     sx={{
                     height: '100%',
                     width: '100%',
-                    objectFit: 'fill'
+                    objectFit: {xs: 'cover', md: 'fill'}
                     }}
                 />
                 </Box>
@@ -182,7 +182,7 @@ const images = [
             left: 0,
             right: 0,
             transform: 'translateY(-50%)',
-            display: 'flex',
+            display: {xs: 'none', md: 'flex'},
             justifyContent: 'space-between',
             px: {xs: 0, md: 6},
             zIndex: 2,
@@ -218,7 +218,7 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: 24,
+            bottom: {xs: 30, md: 24},
             left: 24,
             color: 'white',
             padding: 2,
@@ -229,7 +229,7 @@ const images = [
             }}
         >
             <Link href="/galeria">
-            <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline'}}>
+            <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline', fontSize: {xs: '10px', md: '16px'}}}>
                 <ArrowBackIcon />
                 Volver al menú anterior
                 </Typography>
@@ -240,19 +240,19 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: 24,
+            bottom: {xs: 530, md: 24},
             right: 24,
             color: 'white',
             padding: '6px 12px',
             borderRadius: '8px',
             backgroundColor: 'rgba(0, 0, 0, 0.36)',
-            px: 4,
+            px: {xs: 2, md: 4},
             textAlign: 'right'
             }}
         >
             <Typography
             sx={{
-                fontSize: '16px',
+                fontSize: {xs: '10px', md:'16px'},
                 fontWeight: '100',
                 textTransform: 'uppercase'
             }}
@@ -261,7 +261,7 @@ const images = [
             </Typography>
             <Typography
             sx={{
-                fontSize: '30px',
+                fontSize: {xs: '14px', md:'30px'},
                 fontWeight: '100'
             }}
             >
