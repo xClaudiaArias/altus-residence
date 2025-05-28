@@ -184,18 +184,18 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 30, md: 24},
+            bottom: {xs: 80, md: 40},
             left: 24,
             color: 'white',
-            padding: 2,
-            backgroundColor:{xs: 'rgba(0,0,0,.6)', md: 'rgba(0, 0, 0, 0.36)'},
+            padding: {xs: 0, md: 2},
+            backgroundColor:{xs: 'none', md: 'rgba(0, 0, 0, 0.36)'},
             borderRadius: 2,
             maxWidth: '80%',
 
             }}
         >
             <Link href="/galeria">
-            <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline', fontSize: {xs: '10px', md: '16px'}}}>
+            <Typography variant="body2" sx={{color: "#000", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline', fontSize: {xs: '10px', md: '16px'}}}>
                 <ArrowBackIcon />
                 Volver al menú anterior
                 </Typography>
@@ -206,7 +206,7 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 530, md: 24},
+            bottom: {xs: 80, md: 40},
             right: 24,
             color: 'white',
             padding: '6px 12px',
