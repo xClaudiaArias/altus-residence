@@ -176,7 +176,7 @@ const images = [
             bottom: {xs: 30, md: 24},
             left: 24,
             color: 'white',
-            padding: 2,
+            padding: {xs: 1, md: 2},
             backgroundColor: {xs: 'rgba(0, 0, 0, 0.61)', md: 'rgba(0, 0, 0, 0.36)'},
             borderRadius: 2,
             maxWidth: '80%',
@@ -195,7 +195,7 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 530, md: 24},
+            bottom: {xs: 80, md: 40},
             right: 24,
             color: 'white',
             padding: '6px 12px',
