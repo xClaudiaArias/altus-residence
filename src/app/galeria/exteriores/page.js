@@ -204,11 +204,11 @@ export default function Slideshow() {
       <Box
         sx={{
           position: 'absolute',
-          bottom: {xs: 30, md: 24},
+          bottom: {xs: 80, md: 40},
           left: 24,
           color: 'white',
-          padding: 2,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          padding: {xs: 0, md: 2},
+          backgroundColor: {xs: 'none', md: 'rgba(0, 0, 0, 0.5)'},
           borderRadius: 2,
           maxWidth: '80%',
 
@@ -226,7 +226,7 @@ export default function Slideshow() {
       <Box
         sx={{
           position: 'absolute',
-          bottom: {xs: 530, md: 24},
+          bottom: {xs: 80, md: 40},
           right: 24,
           color: 'white',
           padding: '6px 12px',
