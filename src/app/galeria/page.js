@@ -182,8 +182,8 @@ export default function Galeria() {
         <Box
             sx={{
                 position: 'relative',
-                height: '24px',
-                display: 'flex',
+                height: '50px',
+                display: {xs: 'none', md: 'flex'},
                 alignItems: 'center'
             }}>
             {showScrollTop && (
@@ -192,12 +192,14 @@ export default function Galeria() {
                         sx={{
                         display: {xs: 'none', md: 'block'},
                         position: 'absolute',
+                        width: '50px',
+                        height: '50px',
                         bottom: 0,
                         right: 0,
                         color: 'white',
                         backgroundColor: 'rgba(0,0,0,0.4)',
                         '&:hover': {
-                            backgroundColor: 'rgba(0,0,0,0.6)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.37)',
                         },
                         }}
                     >
@@ -384,20 +386,24 @@ export default function Galeria() {
 
 
         </Box>
-                {/* Scroll Button */}
-                <IconButton onClick={scrollDown} 
-                    sx={{
-                        display: {xs: 'none', md: 'block'},
-                        fontSize: '13px',
-                        color: 'white', 
-                        mt: 2,
-                        backgroundColor: 'rgba(0,0,0,0.4)',
-                        '&:hover': {
-                            backgroundColor: 'rgba(0,0,0,0.6)',
-                        },
-                    }}>
-                    <ArrowDownwardIcon />
-                </IconButton>
+        {/* Scroll Button */}
+        <Box sx={{display: {xs: 'none', md: 'flex'}, justifyContent: 'flex-end', alignItems: 'center', height: '50px', py: 4}}>
+            <IconButton onClick={scrollDown} 
+                sx={{
+                    width: '50px',
+                    height: '50px',
+                    display: {xs: 'none', md: 'block'},
+                    fontSize: '16px',
+                    color: 'white', 
+                    // mt: 2,
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    '&:hover': {
+                        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                    },
+                }}>
+                <ArrowDownwardIcon />
+            </IconButton>
+        </Box>
         </Box>
     </Box>
     );
