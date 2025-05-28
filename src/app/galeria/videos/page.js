@@ -24,22 +24,30 @@ const videos = [
 ]
 
     export default function Slideshow() {
-    const [emblaRef, embla] = useEmblaCarousel({ loop: true });
+    const [emblaRef, embla] = useEmblaCarousel({ loop: true, draggable: true });
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const scrollPrev = useCallback(() => embla?.scrollPrev(), [embla]);
     const scrollNext = useCallback(() => embla?.scrollNext(), [embla]);
 
-    const onSelect = useCallback(() => {
-        if (!embla) return;
-        setSelectedIndex(embla.selectedScrollSnap());
-    }, [embla]);
-
     useEffect(() => {
         if (!embla) return;
-        embla.on('select', onSelect);
-        onSelect();
-    }, [embla, onSelect]);
+
+        const updateIndex = () => {
+            setSelectedIndex(embla.selectedScrollSnap());
+        };
+
+        embla.on('select', updateIndex);
+        embla.on('reInit', updateIndex);
+        updateIndex();
+
+        console.log(selectedIndex, ' selected index')
+
+        return () => {
+            embla.off('select', updateIndex);
+            embla.off('reInit', updateIndex);
+        };
+    }, [embla]);
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -74,7 +82,8 @@ const videos = [
             sx={{
             height: '100%',
             width: '100%',
-            overflow: 'hidden',
+            overflowX: { xs: 'auto', md: 'hidden' },
+            overflowY: 'hidden',
             backgroundColor: 'black'
             }}
         >
@@ -82,7 +91,9 @@ const videos = [
             sx={{
                 display: 'flex',
                 height: '100%',
-                backgroundColor: "black"
+                backgroundColor: "black",
+                minWidth: "100%",
+                scrollSnapType: 'x mandatory'
             }}
             >
             {videos.map((video, idx) => (
@@ -90,9 +101,10 @@ const videos = [
                 key={idx}
                 sx={{
                     flex: '0 0 100%',
-                    height: '100%',
+                    height: {xs: '100vh', md: '100%'},
                     position: 'relative',
-                    backgroundColor: "#000"
+                    backgroundColor: "#000",
+                    scrollSnapAlign: 'start',
                 }}
                 >
                 <Box
@@ -123,9 +135,9 @@ const videos = [
             left: 0,
             right: 0,
             transform: 'translateY(-50%)',
-            display: 'flex',
+            display: {xs: 'none', md: 'flex'},
             justifyContent: 'space-between',
-            px: 6,
+            px: {xs: 0, md: 6},
             zIndex: 2,
             }}
         >
@@ -159,10 +171,10 @@ const videos = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: 24,
+            bottom: {xs: 80, md: 40},
             left: 24,
             color: 'white',
-            padding: 2,
+            padding: {xs: 0, md: 2},
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
             borderRadius: 2,
             maxWidth: '80%',
@@ -170,7 +182,7 @@ const videos = [
             }}
         >
             <Link href="/galeria">
-            <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline'}}>
+            <Typography variant="body2" sx={{color: "#fff", textTransform: 'uppercase', fontWeight: '100', display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'underline', fontSize: {xs: '10px', md: '16px'}}}>
                 <ArrowBackIcon />
                 Volver al menú anterior
                 </Typography>
@@ -181,20 +193,20 @@ const videos = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: 24,
+            bottom: {xs: 80, md: 40},
             right: 24,
             color: 'white',
             padding: '6px 12px',
             borderRadius: '8px',
             backgroundColor: 'rgba(0, 0, 0, 0.36)',
-            px: 4,
+            px: {xs: 2, md: 4},
             mb: 10,
             textAlign: 'right'
             }}
         >
             <Typography
             sx={{
-                fontSize: '16px',
+                fontSize: {xs: '10px', md:'16px'},
                 fontWeight: '100',
                 textTransform: 'uppercase'
             }}
@@ -203,7 +215,7 @@ const videos = [
             </Typography>
             <Typography
             sx={{
-                fontSize: '30px',
+                fontSize: {xs: '14px', md:'30px'},
                 fontWeight: '100'
             }}
             >
