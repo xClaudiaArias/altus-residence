@@ -124,7 +124,7 @@ export default function Equipo() {
                     display: 'flex',
                     flexDirection: {xs: 'column', md: 'row'},
                     justifyContent: 'space-between',
-                    py: {xs: 0, md: 5},
+                    py: {xs: 3, md: 5},
                     backgroundColor: '#fff',
                     color: '#000',
                     width: '100vw',
@@ -204,7 +204,7 @@ export default function Equipo() {
                     display: 'flex',
                     flexDirection: {xs: 'column-reverse', md: 'row'},
                     justifyContent: 'space-between',
-                    py: {xs: 0, md: 5},
+                    py: {xs: 3, md: 5},
                     width: '100vw',
                     px: {xs: 2, md: 4},
                 }}
