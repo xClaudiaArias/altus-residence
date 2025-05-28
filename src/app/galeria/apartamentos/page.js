@@ -240,7 +240,8 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 680, md: 24},
+            top: {xs: 100, md: 'none'},
+            bottom: {xs: 'none', md: 24},
             right: 24,
             color: 'white',
             padding: '6px 12px',
