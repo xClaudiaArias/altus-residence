@@ -123,7 +123,7 @@ const images = [
         <Box
         sx={{
             width: '100vw',
-            height: '100vh',
+            height: {xs: '100vh', md: '100%'},
             position: 'relative',
             overflow: 'hidden',
             backgroundColor: "white"
@@ -133,7 +133,7 @@ const images = [
         <Box
             ref={emblaRef}
             sx={{
-            height: '100%',
+            height: {xs: '100vh', md: '100%'},
             width: '100%',
             overflowX: { xs: 'auto', md: 'hidden' },
             overflowY: 'hidden'
@@ -142,7 +142,7 @@ const images = [
             <Box
             sx={{
                 display: 'flex',
-                height: '100%',
+                height: {xs: '100vh', md: '100%'},
                 minWidth: "100%",
                 scrollSnapType: 'x mandatory'
                 
@@ -218,7 +218,7 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 30, md: 24},
+            bottom: {xs: 80, md: 24},
             left: 24,
             color: 'white',
             padding: 2,
@@ -240,7 +240,7 @@ const images = [
         <Box
             sx={{
             position: 'absolute',
-            bottom: {xs: 530, md: 24},
+            bottom: {xs: 680, md: 24},
             right: 24,
             color: 'white',
             padding: '6px 12px',
